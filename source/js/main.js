@@ -1,4 +1,9 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
 // import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
+import './modules/slider-promo.js';
+import {openMainMenu, clickMenuLinks, clickSubMenuLinks} from './modules/menu.js';
+import {setPromoBackground} from './modules/promo-background.js';
+
+openMainMenu();
+clickMenuLinks();
+clickSubMenuLinks();
+setPromoBackground();

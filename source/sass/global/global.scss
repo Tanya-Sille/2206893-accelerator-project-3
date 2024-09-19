@@ -1,0 +1,70 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: $mobile-width;
+  color: $base-text-color;
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-style: normal;
+  background-color: $base-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 $mobile-padding;
+  width: $mobile-width;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 $tablet-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 0 $desktop-padding;
+  }
+}
+
+.menu-open-overlay {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: $overlay-menu-color;
+    inset: 0;
+    z-index: 2;
+  }
+}

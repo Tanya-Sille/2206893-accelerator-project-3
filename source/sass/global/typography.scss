@@ -1,0 +1,16 @@
+.title {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 34px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+  }
+}

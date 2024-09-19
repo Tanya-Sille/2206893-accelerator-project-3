@@ -1,0 +1,117 @@
+.button {
+  position: relative;
+  border: 1px solid $additional-text-color;
+  border-radius: 30px;
+  background-color: $transparent;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: $additional-text-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s, background-color 0.3s;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    background-color: $additional-text-color;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+
+  &::after {
+    background-color: $base-color;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.3s transform 0.3s;
+  }
+
+  &:hover {
+    color: $additional-color;
+    background-color: $additional-text-color;
+
+    &::before {
+      background-color: $additional-color;
+    }
+
+    &::after {
+      background-color: $additional-text-color;
+    }
+  }
+
+  &:active {
+    color: rgba($additional-color, 0.7);
+    background-color: $additional-text-color;
+
+    &::before {
+      background-color: $additional-color;
+    }
+
+    &::after {
+      opacity: 0.7;
+      background-color: $additional-text-color;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    color: $disabled-color;
+    border-color: $disabled-color;
+    background-color: $transparent;
+
+    &::before {
+      background-color: $disabled-color;
+    }
+
+    &::after {
+      background-color: $base-color;
+    }
+  }
+
+  &--arrow:hover,
+  &--arrow:focus-visible {
+    &::after {
+      animation: arrowRotateEffect 0.3s;
+    }
+  }
+
+  &--reversed {
+    border-color: $additional-color;
+    background-color: $additional-text-color;
+    color: $additional-color;
+
+    &::before {
+      background-color: $additional-color;
+    }
+
+    &::after {
+      background-color: $additional-text-color;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+}
+
+@keyframes arrowRotateEffect {
+  from {
+    transform: translateY(-50%) rotate(0);
+  }
+  to {
+    transform: translateY(-50%) rotate(45deg);
+  }
+}

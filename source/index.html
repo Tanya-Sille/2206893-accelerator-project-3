@@ -5,26 +5,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internship</title>
+    <link rel="preload" href="fonts/Manrope-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Manrope-Regular.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Manrope-Medium.woff" type="font/woff" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="sass/style.scss">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
   </head>
 
-  <body class="page-body">
+  <body class="page">
     <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+    <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
       <use href="/__spritemap#sprite-user"></use>
-    </svg>
+    </svg> -->
     <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
-    <div data-test="grant">grant</div>
-    <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+    <main>
+      <h1 class="visually-hidden">Проект для стажировки Internship</h1>
+      <div class="hero" data-test="hero">
+        <header class="hero__header header container">
+          <div class="header__logo">
+            <svg alt="Логотип Internship." width="30" height="30">
+              <use href="/__spritemap#sprite-logo"></use>
+            </svg>
+          </div>
+          <nav class="header__navigation header__navigation--hidden">
+            <button class="header__navigation-toggle button" type="button">Меню</button>
+            <ul class="header__navigation-list">
+              <li class="header__navigation-item">
+                <a class="header__navigation-link header__link" href="#about">О проекте</a>
+              </li>
+              <li class="header__navigation-item">
+                <button class="header__navigation-link header__navigation-link--programs header__sub-navigation-button header__link" type="button">Программы</button>
+                <ul class="header__sub-navigation header__sub-navigation--hidden">
+                  <li class="header__sub-navigation-item">
+                    <a class="header__sub-navigation-link header__link" href="#programs">Стажировки</a>
+                  </li>
+                  <li class="header__sub-navigation-item">
+                    <a class="header__sub-navigation-link header__link" href="#programs">Волонтёрство</a>
+                  </li>
+                  <li class="header__sub-navigation-item">
+                    <a class="header__sub-navigation-link header__link" href="#programs">Учёба</a>
+                  </li>
+                  <li class="header__sub-navigation-item">
+                    <a class="header__sub-navigation-link header__link" href="#programs">Религия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__navigation-item">
+                <a class="header__navigation-link header__link" href="#grant">Как поехать</a>
+              </li>
+              <li class="header__navigation-item">
+                <a class="header__navigation-link header__link" href="#reviews">Отзывы</a>
+              </li>
+              <li class="header__navigation-item">
+                <button class="header__navigation-link header__navigation-link--news header__sub-navigation-button header__link" type="button">Новости</button>
+                <ul class="header__sub-navigation header__sub-navigation--hidden">
+                  <li class="header__sub-navigation-item">
+                    <a class="header__sub-navigation-link header__link" href="#news">Общее</a>
+                  </li>
+                  <li class="header__sub-navigation-item">
+                    <a class="header__sub-navigation-link header__link" href="#voluntaree-news">Волонтёрство</a>
+                  </li>
+                  <li class="header__sub-navigation-item">
+                    <a class="header__sub-navigation-link header__link" href="#internship-news">Стажировки</a>
+                  </li>
+                  <li class="header__sub-navigation-item">
+                    <a class="header__sub-navigation-link header__link" href="#carieer-news">Карьера</a>
+                  </li>
+                  <li class="header__sub-navigation-item">
+                    <a class="header__sub-navigation-link header__link" href="#travel-news">Путешествия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__navigation-item">
+                <a class="header__navigation-link header__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <section class="hero__promo promo swiper">
+          <h2 class="visually-hidden">Лучшее от Internship!</h2>
+          <ul class="promo__list swiper-wrapper">
+            <!-- Для слайдов дш через js по разрешению и ppx экрана устанавливаются фоновые изображения на основе значения data-background в блоке promo__content (все фоновые изображения сохраняются с именем по определенной маске на основе этого значения) -->
+            <li class="promo__item swiper-slide">
+              <div class="promo__content container" data-background="studying">
+                <div class="promo__pagination-wrapper"></div>
+                <h3 class="promo__item-title">Глобальный профессиональный опыт обучения за рубежом</h3>
+                <div class="promo__item-content">
+                  <p>Погрузитесь в академическую программу, проходя практику в&nbsp;разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                  <div class="promo__content-link-wrapper">
+                    <a class="promo__content-link button button--arrow" href="#">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="promo__item swiper-slide">
+              <div class="promo__content container" data-background="volunteer">
+                <div class="promo__pagination-wrapper"></div>
+                <h3 class="promo__item-title">Волонтёрские программы – внесите свой вклад в общество</h3>
+                <div class="promo__item-content">
+                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                  <div class="promo__content-link-wrapper">
+                    <a class="promo__content-link button button--arrow" href="#" tabindex="-1">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="promo__item swiper-slide">
+              <div class="promo__content container" data-background="internship">
+                <div class="promo__pagination-wrapper"></div>
+                <h3 class="promo__item-title">Программы стажировок в&nbsp;крупнейших компаниях мира</h3>
+                <div class="promo__item-content">
+                  <p>Получите незаменимый опыт работы в&nbsp;ведущих мировых компаниях и&nbsp;государственных организациях.</p>
+                  <div class="promo__content-link-wrapper">
+                    <a class="promo__content-link button button--arrow" href="#" tabindex="-1">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div data-test="about" id="about">about</div>
+      <div data-test="programs" id="programs">programs</div>
+      <div data-test="grant" id="grant">grant</div>
+      <div data-test="news" id="news">news</div>
+      <div data-test="FAQ">FAQ</div>
+      <div data-test="reviews" id="reviews">reviews</div>
+      <div data-test="contacts" id="contacts">contacts</div>
+      <div data-test="form">form</div>
+    </main>
+    <footer class="footer container" data-test="footer">
+      <div class="footer__logo">
+        <svg alt="Логотип Internship." width="30" height="30">
+          <use href="/__spritemap#sprite-logo"></use>
+        </svg>
+      </div>
+      <div class="footer__navigation">
+        <ul class="footer__navigation-list">
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#about">О проекте</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#programs">Программы</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#grant">Как поехать</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#news">Новости</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <a href="#" class="footer__politics">Политика конфиденциальности</a>
+        <p class="footer__privacy">Стажировка © 2023 Все права защищены</p>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--vk" href="https://vk.com/htmlacademy" rel="noreferrer noopener" target="_blank">
+              <span class="visually-hidden">Мы во ВКонтакте</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--ok" href="https://ok.ru" rel="noreferrer noopener" target="_blank">
+              <span class="visually-hidden">Мы в Одноклассниках</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--reddit" href="https://reddit.com" rel="noreferrer noopener"
+              target="_blank">
+              <span class="visually-hidden">Мы на reddit</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     <script type="module" src="js/main.js"></script>
   </body>
 
