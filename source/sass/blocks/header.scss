@@ -175,6 +175,16 @@
   &--current {
     opacity: 1;
   }
+
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: none;
+    opacity: 1;
+  }
 }
 
 .header__navigation-link {
