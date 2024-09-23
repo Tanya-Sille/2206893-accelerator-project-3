@@ -29,7 +29,7 @@
   }
 
   &::after {
-    background-color: $base-color;
+    background-color: $additional-color;
     mask-repeat: no-repeat;
     mask-position: center;
     transition: background-color 0.3s transform 0.3s;
@@ -70,27 +70,38 @@
     pointer-events: none;
     color: $disabled-color;
     border-color: $disabled-color;
-    background-color: $transparent;
 
     &::before {
       background-color: $disabled-color;
     }
 
     &::after {
-      background-color: $base-color;
+      background-color: rgba($additional-color, 0.6);
     }
   }
 
-  &--arrow:hover,
-  &--arrow:focus-visible {
+  &--arrow {
     &::after {
-      animation: arrowRotateEffect 0.3s;
+      mask-image: url("/__spritemap#sprite-arrow-button-view");
+      mask-size: 10px;
+    }
+
+    &:hover::after,
+    &:active::after,
+    &:focus-visible::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:hover,
+    &:focus-visible {
+      &::after {
+        animation: arrowRotateEffect 0.3s;
+      }
     }
   }
 
   &--reversed {
     border-color: $additional-color;
-    background-color: $additional-text-color;
     color: $additional-color;
 
     &::before {
@@ -99,6 +110,46 @@
 
     &::after {
       background-color: $additional-text-color;
+    }
+
+    &:hover {
+      color: $additional-text-color;
+      background-color: $additional-color;
+
+      &::before {
+        background-color: $additional-text-color;
+      }
+
+      &::after {
+        background-color: $additional-color;
+      }
+    }
+
+    &:active {
+      color: rgba($additional-text-color, 0.7);
+      background-color: $additional-color;
+
+      &::before {
+        background-color: $additional-text-color;
+      }
+
+      &::after {
+        background-color: rgba($additional-text-color, 0.7);
+      }
+    }
+
+    &:disabled {
+      pointer-events: none;
+      color: $disabled-color;
+      border-color: $disabled-color;
+
+      &::before {
+        background-color: $disabled-color;
+      }
+
+      &::after {
+        background-color: rgba($additional-color, 0.6);
+      }
     }
   }
 

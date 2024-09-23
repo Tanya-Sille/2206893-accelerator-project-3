@@ -26,6 +26,7 @@
     padding-top: 160px;
     padding-bottom: 60px;
     min-height: 1024px;
+    background-position: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -203,7 +204,7 @@
       height: 2px;
       width: 100%;
       background-color: $additional-color;
-      z-index: 0-1;
+      z-index: -1;
     }
   }
 
@@ -312,17 +313,6 @@
   &::after {
     height: 34px;
     width: 34px;
-  }
-
-  &::after {
-    mask-image: url("/__spritemap#sprite-arrow-button-view");
-    mask-size: 10px;
-  }
-
-  &:hover::after,
-  &:active::after,
-  &:focus-visible::after {
-    transform: translateY(-50%) rotate(45deg);
   }
 
   @media (min-width: $tablet-width) {
