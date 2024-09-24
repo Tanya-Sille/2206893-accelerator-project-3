@@ -4,11 +4,23 @@ const selectLabels = select.querySelectorAll('.form__select-label');
 const selectOptions = select.querySelectorAll('.form__select-option');
 let selectedOption = document.querySelector('.form__select-option:checked');
 
+const closeSelect = () => {
+  select.setAttribute('data-state', '');
+  selectLabels.forEach((selectLabel) => selectLabel.setAttribute('tabindex', '-1'));
+};
+
+const onDocumentEscapeKeydown = (evt) => {
+  if (evt.code === 'Escape') {
+    evt.preventDefault();
+    closeSelect();
+  }
+};
+
+
 const onDocumentClick = (evt) => {
   if (!evt.target.closest('.form__select')) {
     evt.preventDefault();
-    select.setAttribute('data-state', '');
-    selectLabels.forEach((selectLabel) => selectLabel.setAttribute('tabindex', '-1'));
+    closeSelect();
   }
 };
 
@@ -22,14 +34,15 @@ const changeSelectedOption = (index) => {
 
 const setSelectState = () => {
   if (select.getAttribute('data-state') === 'active') {
-    select.setAttribute('data-state', '');
-    selectLabels.forEach((selectLabel) => selectLabel.setAttribute('tabindex', '-1'));
+    closeSelect();
     document.removeEventListener('click', onDocumentClick);
+    document.removeEventListener('keydown', onDocumentEscapeKeydown);
   } else {
     select.setAttribute('data-state', 'active');
     selectLabels.forEach((selectLabel) => selectLabel.setAttribute('tabindex', '0'));
     select.querySelector('.form__select-label--active').focus();
     document.addEventListener('click', onDocumentClick);
+    document.addEventListener('keydown', onDocumentEscapeKeydown);
   }
 };
 

@@ -323,6 +323,10 @@
       height: 46px;
       width: 46px;
     }
+
+    &::after {
+      mask-image: url("/__spritemap#sprite-arrow-button-view");
+    }
   }
 
   @media (min-width: $desktop-width) {

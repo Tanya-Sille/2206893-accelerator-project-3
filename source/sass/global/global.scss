@@ -68,3 +68,12 @@ img {
     z-index: 2;
   }
 }
+
+.mobile-br {
+  @media (max-width: ($tablet-width - 0.02)) {
+    &::after {
+      content: "\A";
+      white-space: pre;
+    }
+  }
+}

@@ -88,7 +88,7 @@
         <section class="hero__promo promo swiper">
           <h2 class="visually-hidden">Лучшее от Internship!</h2>
           <ul class="promo__list swiper-wrapper">
-            <!-- Для слайдов li через js по разрешению и ppx экрана устанавливаются фоновые изображения на основе значения data-background в блоке promo__content (все фоновые изображения сохраняются с именем по определенной маске на основе этого значения) -->
+            <!-- Для слайдов li через js по разрешению и dpr экрана устанавливаются фоновые изображения на основе значения data-background в блоке promo__content (все фоновые изображения сохраняются с именем по определенной маске на основе этого значения) -->
             <li class="promo__item swiper-slide">
               <div class="promo__content container" data-background="studying">
                 <div class="promo__pagination-wrapper"></div>
@@ -176,7 +176,7 @@
               <label class="form__label form__label--checkbox">
                 <input class="visually-hidden form__control-input" name="personal-data-consent" type="checkbox" required>
                 <span class="form__control-mark"></span>
-                <span class="form__label-text form__label-text--checkbox">Я согласен на обработку моих персональных данных</span>
+                <span class="form__label-text form__label-text--checkbox">Я согласен на обработку моих персональных <span class="mobile-br"></span>данных</span>
               </label>
               <button class="form__button button button--reversed button--arrow" type="submit">Отправить</button>
             </form>
