@@ -25,10 +25,8 @@
 }
 
 .header__navigation {
+  @include flex-column(4px);
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
   margin-left: -52px;
   width: 290px;
 
@@ -143,10 +141,8 @@
 
 .header__navigation-list {
   @include list-reset;
-  display: flex;
-  flex-direction: column;
+  @include flex-column(28px);
   padding: 35px 25px;
-  gap: 28px;
   background-color: $additional-text-color;
   border-radius: 16px;
 
@@ -154,14 +150,12 @@
 }
 
 .header__navigation-item {
-  display: flex;
-  flex-direction: column;
+  @include flex-column(0);
   align-items: flex-start;
 }
 
 .header__sub-navigation-item {
-  display: flex;
-  flex-direction: column;
+  @include flex-column(0);
 }
 
 .header__link {
@@ -223,9 +217,7 @@
 
 .header__sub-navigation {
   @include list-reset;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  @include flex-column(16px);
   padding: 20px 16px 0;
 
   &--hidden {

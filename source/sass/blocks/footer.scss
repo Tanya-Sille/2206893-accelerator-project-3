@@ -106,11 +106,9 @@
 }
 
 .footer__legal {
-  display: flex;
-  flex-direction: column;
+  @include flex-column(13px);
   align-items: center;
   text-align: center;
-  gap: 13px;
   margin-bottom: 15px;
   font-weight: 400;
   font-size: 12px;

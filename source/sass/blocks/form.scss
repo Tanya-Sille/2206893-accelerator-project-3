@@ -439,9 +439,8 @@
 }
 
 .form__select-options {
+  @include flex-column(0);
   position: absolute;
-  display: flex;
-  flex-direction: column;
   top: 55px;
   left: 0;
   width: 100%;

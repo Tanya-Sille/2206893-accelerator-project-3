@@ -13,6 +13,7 @@
 }
 
 .modal__content {
+  @include flex-column(0);
   position: absolute;
   display: flex;
   flex-direction: column;

@@ -50,8 +50,7 @@
 }
 
 .contacts-form__wrapper {
-  display: flex;
-  flex-direction: column;
+  @include flex-column(0);
   margin: auto auto 0;
   padding: $mobile-padding;
   width: 300px;

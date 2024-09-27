@@ -9,3 +9,9 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin flex-column($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}

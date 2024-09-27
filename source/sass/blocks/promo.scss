@@ -35,9 +35,8 @@
 }
 
 .promo__content {
+  @include flex-column(0);
   position: relative;
-  display: flex;
-  flex-direction: column;
   margin-top: auto;
   padding: 0 $mobile-padding;
 
@@ -167,9 +166,8 @@
 }
 
 .promo__item-content {
+  @include flex-column(0);
   position: relative;
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
   z-index: 1;
 
