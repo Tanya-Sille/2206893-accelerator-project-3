@@ -2,10 +2,15 @@
 import './modules/slider-promo.js';
 import {openMainMenu, clickMenuLinks, clickSubMenuLinks} from './modules/menu.js';
 import {setPromoBackground} from './modules/promo-background.js';
-import {activateFormSelect} from './modules/form-select.js';
+import {activateSelectContact, activateSelectModal} from './modules/form-select.js';
+import {initPhoneMask} from './modules/phone-mask.js';
+import {initModal} from './modules/modal.js';
 
 openMainMenu();
 clickMenuLinks();
 clickSubMenuLinks();
 setPromoBackground();
-activateFormSelect();
+activateSelectContact();
+activateSelectModal();
+initPhoneMask();
+initModal();

@@ -1,0 +1,103 @@
+.contacts-form {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: $tablet-width;
+    padding: 50px 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 60px $desktop-padding;
+  }
+}
+
+.contacts-form__image-background-wrapper {
+  display: flex;
+  padding: 40px 10px;
+  min-height: 753px;
+  background-image: url("../img/form-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #95a6a5;
+  border-radius: 16px;
+
+  @media (resolution >= 2dppx) {
+    background-image: url("../img/form-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 210px 0 0;
+    min-height: 780px;
+    background-image: url("../img/form-tablet.png");
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../img/form-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 750px;
+    min-height: 800px;
+    background-image: url("../img/form-desktop.png");
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../img/form-desktop@2x.png");
+    }
+  }
+}
+
+.contacts-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 0;
+  padding: $mobile-padding;
+  width: 300px;
+  background-color: $additional-text-color;
+  border-radius: 16px;
+  color: $base-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 30px 40px;
+    width: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 30px 70px;
+  }
+}
+
+.contacts-form__title {
+  @include indent-reset;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  font-style: normal;
+  color: $additional-color;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 11px;
+    margin-bottom: 31px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 14px;
+    margin-bottom: 34px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.contacts-form__text {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}

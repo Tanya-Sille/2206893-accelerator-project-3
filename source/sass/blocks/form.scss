@@ -1,103 +1,15 @@
 .form {
-  padding-top: 40px;
-  padding-bottom: 40px;
-
-  @media (min-width: $tablet-width) {
-    margin: 0 auto;
-    width: $tablet-width;
-    padding: 50px 58px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: $desktop-width;
-    padding: 60px $desktop-padding;
-  }
-}
-
-.form__image-background-wrapper {
-  display: flex;
-  padding: 40px 10px;
-  min-height: 753px;
-  background-image: url("../img/form-mobile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #95a6a5;
-  border-radius: 16px;
-
-  @media (resolution >= 2dppx) {
-    background-image: url("../img/form-mobile@2x.png");
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 0 210px 0 0;
-    min-height: 780px;
-    background-image: url("../img/form-tablet.png");
-
-    @media (resolution >= 2dppx) {
-      background-image: url("../img/form-tablet@2x.png");
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-right: 750px;
-    min-height: 800px;
-    background-image: url("../img/form-desktop.png");
-
-    @media (resolution >= 2dppx) {
-      background-image: url("../img/form-desktop@2x.png");
-    }
-  }
-}
-
-.form__wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: auto auto 0;
-  padding: $mobile-padding;
-  width: 300px;
-  background-color: $additional-text-color;
-  border-radius: 16px;
-  color: $base-color;
-
-  @media (min-width: $tablet-width) {
-    margin: 0;
-    padding: 30px 40px;
-    width: auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 30px 70px;
-  }
-}
-
-.form__title {
-  margin-bottom: 10px;
-  color: $additional-color;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 11px;
-    margin-bottom: 31px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-top: 14px;
-    margin-bottom: 34px;
-    font-size: 32px;
-    line-height: 36px;
-  }
-}
-
-.form__text {
-  margin-bottom: 20px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 40px;
-  }
-}
-
-.form__contacts {
   display: grid;
   gap: 20px;
+
+  &--modal {
+    gap: 15px;
+    text-align: left;
+
+    @media (min-width: $tablet-width) {
+      gap: 20px;
+    }
+  }
 }
 
 .form__label {
@@ -114,6 +26,16 @@
       min-height: 20px;
     }
   }
+
+  &--modal {
+    gap: 8px;
+
+    @media (min-width: $tablet-width) {
+      gap: 12px;
+      min-height: 20px;
+      align-items: center;
+    }
+  }
 }
 
 .form__control-mark {
@@ -128,6 +50,11 @@
   transform: translateY(-50%);
   transition: all 0.1s;
   cursor: pointer;
+
+  &--modal {
+    background-color: $additional-text-color;
+    border-color: $additional-text-color;
+  }
 }
 
 .form__control-input:checked + .form__control-mark::before {
@@ -144,9 +71,17 @@
   transform: translate(-50%, -50%);
 }
 
+.form__control-input:checked + .form__control-mark--modal::before {
+  background-color: $additional-color;
+}
+
 .form__control-input:hover + .form__control-mark,
 .form__control-input:active + .form__control-mark {
   background-color: $additional-text-color;
+
+  &--modal {
+    background-color: $additional-color;
+  }
 }
 
 .form__control-input:focus-visible {
@@ -165,16 +100,31 @@
 .form__control-input:disabled + .form__control-mark {
   pointer-events: none;
   background-color: rgba($additional-color, 0.6);
+
+  &--modal {
+    background-color: rgba($additional-text-color, 0.2);
+    border-color: rgba($additional-text-color, 0.2);
+  }
 }
 
 .form__control-input:focus-visible + .form__control-mark {
   background-color: $additional-text-color;
+
+  &--modal {
+    background-color: $additional-color;
+  }
 }
 
 .form__control-input:checked:hover + .form__control-mark::before,
 .form__control-input:checked:active + .form__control-mark::before,
 .form__control-input:checked:focus-visible + .form__control-mark::before {
   background-color: $additional-color;
+}
+
+.form__control-input:checked:hover + .form__control-mark--modal::before,
+.form__control-input:checked:active + .form__control-mark--modal::before,
+.form__control-input:checked:focus-visible + .form__control-mark--modal::before {
+  background-color: $additional-text-color;
 }
 
 .form__control-input:checked:disabled + .form__control-mark {
@@ -184,6 +134,11 @@
 
   &::before {
     background-color: $additional-color;
+  }
+
+  &--modal {
+    background-color: $disabled-color;
+    border-color: $disabled-color;
   }
 }
 
@@ -200,12 +155,28 @@
     opacity: 1;
   }
 
+  &--modal {
+    font-size: 14px;
+    color: $base-text-color;
+  }
+
+  &--modal-checkbox {
+    font-size: 12px;
+    color: $base-text-color;
+    opacity: 0.9;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 20px;
 
     &--checkbox {
       font-size: 12px;
+    }
+
+    &--modal-checkbox {
+      font-size: 12px;
+      line-height: 12px;
     }
   }
 
@@ -216,8 +187,13 @@
       line-height: 14px;
     }
 
-    &--checkbox {
+    &--checkbox,
+    &--modal-checkbox {
       line-height: 12px;
+    }
+
+    &--modal {
+      line-height: 18px;
     }
   }
 }
@@ -261,13 +237,37 @@
   }
 
   &:disabled {
-    border-color: $additional-color;
+    border-color: rgba($additional-color, 0.4);
     background-color: rgba($additional-color, 0.2);
-    opacity: 0.4;
   }
 
   &:disabled + .form__label-text {
     opacity: 0.6;
+  }
+
+  &--modal {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: $additional-color;
+    color: $base-text-color;
+    border-color: rgba($base-text-color, 0.3);
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      border-color: $base-text-color;
+      color: $base-text-color;
+    }
+
+    &:disabled {
+      border-color: rgba($disabled-color, 0.5);
+      background-color: rgba($disabled-color, 0.2);
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
   }
 }
 
@@ -302,6 +302,31 @@
 
   &[data-state="active"] + .form__label-text {
     opacity: 1;
+  }
+
+  &--modal {
+    width: auto;
+    height: 44px;
+
+    &[data-state="active"] {
+      .form__select-title {
+        border-color: $base-text-color;
+      }
+
+      .form__select-label {
+        max-height: 42px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      height: 50px;
+
+      &[data-state="active"] {
+        .form__select-label {
+          max-height: 48px;
+        }
+      }
+    }
   }
 
   &:has(.form__select-title:hover) + .form__label-text,
@@ -367,6 +392,7 @@
   &:disabled {
     pointer-events: none;
     border-color: $disabled-color;
+    background-color: rgba($additional-color, 0.2);
     color: $disabled-color;
 
     &::before {
@@ -374,10 +400,42 @@
     }
   }
 
-  // @media (min-width: $tablet-width) {
-  //   font-size: 14px;
-  //   line-height: 20px;
-  // }
+  &:disabled + .form__label-text {
+    opacity: 0.6;
+  }
+
+  &--modal {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: $additional-color;
+    color: $base-text-color;
+    border-color: rgba($base-text-color, 0.3);
+
+    &::before {
+      background-color: $base-text-color;
+    }
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      border-color: $base-text-color;
+      color: $base-text-color;
+    }
+
+    &:disabled {
+      border-color: rgba($disabled-color, 0.5);
+      background-color: rgba($disabled-color, 0.2);
+
+      &::before {
+        background-color: rgba($disabled-color, 0.5);
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+  }
 }
 
 .form__select-options {
@@ -394,6 +452,15 @@
   border-radius: 8px;
   transition: all 0.3s;
   z-index: 1;
+
+  &--modal {
+    top: 51px;
+    border-color: $base-text-color;
+
+    @media (min-width: $tablet-width) {
+      top: 55px;
+    }
+  }
 }
 
 .form__select-option {
@@ -427,12 +494,13 @@
   width: 100%;
   transition: all 0.3s;
   cursor: pointer;
+
   &:first-of-type {
-    border-radius: 8px 8px 0 0;
+    border-radius: 7px 7px 0 0;
   }
 
   &:last-of-type {
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 7px 7px;
   }
 
   &::before {
@@ -467,6 +535,25 @@
 
     &::after {
       content: attr(data-value);
+    }
+  }
+
+  &--modal {
+    width: auto;
+    height: 44px;
+
+    &::after {
+      top: -51px;
+      height: 44px;
+    }
+
+    @media (min-width: $tablet-width) {
+      height: 48px;
+
+      &::after {
+        top: -55px;
+        height: 48px;
+      }
     }
   }
 
@@ -516,5 +603,23 @@
 
   @media (min-width: $desktop-width) {
     width: 100%;
+  }
+
+  &--modal {
+    margin-top: 10px;
+    padding: 14px 67px 14px 29px;
+    width: 100%;
+
+    &::before,
+    &::after {
+      right: 4px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-right: auto;
+      margin-left: auto;
+      padding: 19px 79px 19px 29px;
+      width: auto;
+    }
   }
 }

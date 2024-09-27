@@ -34,7 +34,7 @@
             <button class="header__navigation-toggle button" type="button">Меню</button>
             <ul class="header__navigation-list">
               <li class="header__navigation-item">
-                <a class="header__navigation-link header__link" href="#about">О проекте</a>
+                <a class="header__navigation-link header__link" href="#about">О проекте</a>
               </li>
               <li class="header__navigation-item">
                 <button class="header__navigation-link header__navigation-link--programs header__sub-navigation-button header__link" type="button">Программы</button>
@@ -54,7 +54,7 @@
                 </ul>
               </li>
               <li class="header__navigation-item">
-                <a class="header__navigation-link header__link" href="#grant">Как поехать</a>
+                <a class="header__navigation-link header__link" href="#grant">Как поехать</a>
               </li>
               <li class="header__navigation-item">
                 <a class="header__navigation-link header__link" href="#reviews">Отзывы</a>
@@ -92,9 +92,9 @@
             <li class="promo__item swiper-slide">
               <div class="promo__content container" data-background="studying">
                 <div class="promo__pagination-wrapper"></div>
-                <h3 class="promo__item-title">Глобальный профессиональный опыт обучения за рубежом</h3>
+                <h3 class="promo__item-title">Глобальный профессиональный опыт обучения за рубежом</h3>
                 <div class="promo__item-content">
-                  <p>Погрузитесь в академическую программу, проходя практику в&nbsp;разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                  <p>Погрузитесь в академическую программу, проходя практику в&nbsp;разных городах, ощущая настоящий студенческий стиль жизни!</p>
                   <div class="promo__content-link-wrapper">
                     <a class="promo__content-link button button--arrow" href="#">Подробнее</a>
                   </div>
@@ -104,9 +104,9 @@
             <li class="promo__item swiper-slide">
               <div class="promo__content container" data-background="volunteer">
                 <div class="promo__pagination-wrapper"></div>
-                <h3 class="promo__item-title">Волонтёрские программы – внесите свой вклад в общество</h3>
+                <h3 class="promo__item-title">Волонтёрские программы – внесите свой вклад в общество</h3>
                 <div class="promo__item-content">
-                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
                   <div class="promo__content-link-wrapper">
                     <a class="promo__content-link button button--arrow" href="#" tabindex="-1">Подробнее</a>
                   </div>
@@ -135,12 +135,12 @@
       <section data-test="FAQ">FAQ</section>
       <section data-test="reviews" id="reviews">reviews</section>
       <section data-test="contacts" id="contacts">contacts</section>
-      <section class="form" data-test="form">
-        <div class="form__image-background-wrapper">
-          <div class="form__wrapper">
-            <h2 class="form__title title">Напишите нам</h2>
-            <p class="form__text text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-            <form class="form__contacts" action="https://echo.htmlacademy.ru/" method="post">
+      <section class="contacts-form" data-test="form">
+        <div class="contacts-form__image-background-wrapper">
+          <div class="contacts-form__wrapper">
+            <h2 class="contacts-form__title">Напишите нам</h2>
+            <p class="contacts-form__text text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+            <form class="form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
               <label class="form__label">
                 <input class="form__input" type="text" name="name" required>
                 <span class="form__label-text">Имя</span>
@@ -156,27 +156,27 @@
               <div class="form__label">
                 <!-- Для деактивации селекта необходимо установить disabled для кнопки form__select-title
                  класс form__select-label--active должен быть установлен у лейбла выбранной checked дефолтной опции-->
-                <div class="form__select" data-state="">
+                <div class="form__select form__select--contacts" data-state="">
                   <button type="button" class="form__select-title"></button>
                   <div class="form__select-options">
-                    <input id="empty" class="form__select-option" type="radio" name="city" checked />
+                    <input id="empty" class="form__select-option" type="radio" name="city" checked value="" />
                     <label for="empty" tabindex="-1" class="form__select-label form__select-label--active" data-value=""></label>
-                    <input id="Saint-Petersburg" class="form__select-option" type="radio" name="city" />
+                    <input id="Saint-Petersburg" class="form__select-option" type="radio" name="city" value="Санкт-Петербург" />
                     <label for="Saint-Petersburg" tabindex="-1" class="form__select-label" data-value="Санкт-Петербург"></label>
-                    <input id="Moscow" class="form__select-option" type="radio" name="city" />
+                    <input id="Moscow" class="form__select-option" type="radio" name="city" value="Москва" />
                     <label for="Moscow" tabindex="-1" class="form__select-label" data-value="Москва"></label>
-                    <input id="Nizhny-Novgorod" class="form__select-option" type="radio" name="city" />
+                    <input id="Nizhny-Novgorod" class="form__select-option" type="radio" name="city" value="Нижний Новгород" />
                     <label for="Nizhny-Novgorod" tabindex="-1" class="form__select-label" data-value="Нижний Новгород"></label>
-                    <input id="Other" class="form__select-option" type="radio" name="city" />
+                    <input id="Other" class="form__select-option" type="radio" name="city" value="Другой" />
                     <label for="Other" tabindex="-1" class="form__select-label" data-value="Другой"></label>
                   </div>
                 </div>
-                <span class="form__label-text">Выберите город</span>
+                <span class="form__label-text form__label-text--select">Выберите город</span>
               </div>
               <label class="form__label form__label--checkbox">
                 <input class="visually-hidden form__control-input" name="personal-data-consent" type="checkbox" required>
                 <span class="form__control-mark"></span>
-                <span class="form__label-text form__label-text--checkbox">Я согласен на обработку моих персональных <span class="mobile-br"></span>данных</span>
+                <span class="form__label-text form__label-text--checkbox">Я согласен на обработку моих персональных <span class="mobile-br"></span>данных</span>
               </label>
               <button class="form__button button button--reversed button--arrow" type="submit">Отправить</button>
             </form>
@@ -193,13 +193,13 @@
         </div>
         <ul class="footer__navigation-list">
           <li class="footer__navigation-item">
-            <a class="footer__navigation-link" href="#about">О проекте</a>
+            <a class="footer__navigation-link" href="#about">О проекте</a>
           </li>
           <li class="footer__navigation-item">
             <a class="footer__navigation-link" href="#programs">Программы</a>
           </li>
           <li class="footer__navigation-item">
-            <a class="footer__navigation-link" href="#grant">Как поехать</a>
+            <a class="footer__navigation-link" href="#grant">Как поехать</a>
           </li>
           <li class="footer__navigation-item">
             <a class="footer__navigation-link" href="#reviews">Отзывы</a>
@@ -214,7 +214,7 @@
       </div>
       <div class="footer__legal">
         <a class="footer__politics" href="#">Политика конфиденциальности</a>
-        <p class="footer__privacy">Стажировка © 2023 Все права защищены</p>
+        <p class="footer__privacy">Стажировка © 2023 Все права защищены</p>
       </div>
       <ul class="footer__social-list">
         <li class="footer__social-item">
@@ -235,6 +235,51 @@
         </li>
       </ul>
     </footer>
+    <div class="modal modal--close">
+      <div class="modal__content">
+        <button class="modal__close-button" type="button">
+          <span class="visually-hidden">Закрыть модальное окно.</span>
+        </button>
+        <h2 class="modal__title">Напишите нам</h2>
+        <p class="modal__text text">Оставьте ваши контакты, если&nbsp;у&nbsp;вас остались вопросы — мы на них ответим!</p>
+        <form class="modal__form form form--modal" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+          <label class="form__label form__label--modal">
+            <input class="form__input form__input--modal" type="text" name="name-modal" required>
+            <span class="form__label-text form__label-text--modal">Имя</span>
+          </label>
+          <label class="form__label form__label--modal">
+            <input class="form__input form__input--modal" type="tel" name="tel-modal" required>
+            <span class="form__label-text form__label-text--modal">Телефон</span>
+          </label>
+          <div class="form__label form__label--modal">
+            <!-- Для деактивации селекта необходимо установить disabled для кнопки form__select-title
+             класс form__select-label--active должен быть установлен у лейбла выбранной checked дефолтной опции-->
+            <div class="form__select form__select--modal" data-state="">
+              <button type="button" class="form__select-title form__select-title--modal"></button>
+              <div class="form__select-options form__select-options--modal">
+                <input id="empty-modal" class="form__select-option" type="radio" name="city-modal" checked value="" />
+                <label for="empty-modal" tabindex="-1" class="form__select-label form__select-label--active" data-value=""></label>
+                <input id="Saint-Petersburg-modal" class="form__select-option" type="radio" name="city-modal" value="Санкт-Петербург" />
+                <label for="Saint-Petersburg-modal" tabindex="-1" class="form__select-label" data-value="Санкт-Петербург"></label>
+                <input id="Moscow-modal" class="form__select-option" type="radio" name="city-modal" value="Москва" />
+                <label for="Moscow-modal" tabindex="-1" class="form__select-label" data-value="Москва"></label>
+                <input id="Nizhny-Novgorod-modal" class="form__select-option" type="radio" name="city-modal" value="Нижний Новгород" />
+                <label for="Nizhny-Novgorod-modal" tabindex="-1" class="form__select-label" data-value="Нижний Новгород"></label>
+                <input id="Other-modal" class="form__select-option" type="radio" name="city-modal" value="Другой" />
+                <label for="Other-modal" tabindex="-1" class="form__select-label" data-value="Другой"></label>
+              </div>
+            </div>
+            <span class="form__label-text form__label-text--modal form__label-text--select">Выберите город</span>
+          </div>
+          <label class="form__label form__label--checkbox form__label--modal">
+            <input class="visually-hidden form__control-input" name="personal-data-consent-modal" type="checkbox" required>
+            <span class="form__control-mark form__control-mark--modal"></span>
+            <span class="form__label-text form__label-text--modal-checkbox">Я согласен на обработку моих персональных данных</span>
+          </label>
+          <button class="form__button form__button--modal button button--arrow" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
     <script type="module" src="js/main.js"></script>
   </body>
 
