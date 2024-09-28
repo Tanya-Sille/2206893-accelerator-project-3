@@ -35,24 +35,60 @@
 
 .modal__close-button {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  height: 16px;
-  width: 16px;
-  border: none;
-  background-color: $additional-text-color;
-  mask-image: url("/__spritemap#sprite-menu-opened-view");
-  mask-repeat: no-repeat;
-  mask-position: 50%;
-  mask-size: 16px;
+  top: 16px;
+  right: 16px;
+  height: 24px;
+  width: 24px;
+  background-color: $transparent;
+  border-radius: 50%;
+  border: 1px solid $transparent;
   cursor: pointer;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $additional-text-color;
+    mask-image: url("/__spritemap#sprite-menu-opened-view");
+    mask-repeat: no-repeat;
+    mask-position: 50%;
+    mask-size: 16px;
+  }
+
   @media (min-width: $tablet-width) {
-    top: 30px;
-    right: 30px;
-    height: 22px;
-    width: 22px;
-    mask-size: 22px;
+    top: 26px;
+    right: 26px;
+    height: 30px;
+    width: 30px;
+
+    &::before{
+      mask-size: 22px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.7;
+    border-color: $additional-text-color;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $additional-text-color;
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    &::before {
+      background-color: $disabled-color;
+    }
   }
 }
 

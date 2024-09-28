@@ -65,6 +65,7 @@
 
 .contacts__items {
   @include flex-column(15px);
+  align-items: flex-start;
 
   @media (min-width: $tablet-width) {
     gap: 24px;
@@ -93,10 +94,42 @@
 }
 
 .contacts__details {
+  position: relative;
   color: $additional-color;
 
   &--link {
     text-decoration: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $transparent;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 1;
+
+      &::before {
+        background-color: $additional-color;
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: $base-text-color;
+
+      &::before {
+        background-color: $base-text-color;
+      }
+    }
   }
 }
 
