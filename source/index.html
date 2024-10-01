@@ -88,9 +88,9 @@
         <section class="hero__promo promo swiper">
           <h2 class="visually-hidden">Лучшее от Internship!</h2>
           <ul class="promo__list swiper-wrapper">
-            <!-- Для слайдов li через js по разрешению и dpr экрана устанавливаются фоновые изображения на основе значения data-background в блоке promo__content (все фоновые изображения сохраняются с именем по определенной маске на основе этого значения) -->
-            <li class="promo__item swiper-slide">
-              <div class="promo__content container" data-background="studying">
+            <!-- Для слайдов li через js по разрешению и dpr экрана устанавливаются фоновые изображения на основе значения data-background в блоке promo__item (все фоновые изображения сохраняются с именем по определенной маске на основе этого значения) -->
+            <li class="promo__item swiper-slide" data-background="studying">
+              <div class="promo__content container">
                 <div class="promo__pagination-wrapper"></div>
                 <h3 class="promo__item-title">Глобальный профессиональный опыт обучения за рубежом</h3>
                 <div class="promo__item-content">
@@ -101,8 +101,8 @@
                 </div>
               </div>
             </li>
-            <li class="promo__item swiper-slide">
-              <div class="promo__content container" data-background="volunteer">
+            <li class="promo__item swiper-slide" data-background="volunteer">
+              <div class="promo__content container">
                 <div class="promo__pagination-wrapper"></div>
                 <h3 class="promo__item-title">Волонтёрские программы – внесите свой вклад в общество</h3>
                 <div class="promo__item-content">
@@ -113,8 +113,8 @@
                 </div>
               </div>
             </li>
-            <li class="promo__item swiper-slide">
-              <div class="promo__content container" data-background="internship">
+            <li class="promo__item swiper-slide" data-background="internship">
+              <div class="promo__content container">
                 <div class="promo__pagination-wrapper"></div>
                 <h3 class="promo__item-title">Программы стажировок в&nbsp;крупнейших компаниях мира</h3>
                 <div class="promo__item-content">
@@ -157,7 +157,72 @@
           </li>
         </ul>
       </section>
-      <section data-test="programs" id="programs">programs</section>
+      <section class="programs container" data-test="programs" id="programs">
+        <h2 class="programs__title title">Программы</h2>
+        <a class="programs__button-link button button--arrow" href="#">Все программы</a>
+        <div class="programs__slider-control">
+          <div class="programs__control-scrollbar slider-scrollbar swiper-scrollbar"></div>
+          <div class="programs__control-navigation slider-control">
+            <button class="slider-control__button slider-control__button--prev" type="button">
+              <span class="visually-hidden">Показать предыдущий слайд.</span>
+            </button>
+            <button class="slider-control__button slider-control__button--next" type="button">
+              <span class="visually-hidden">Показать следующий слайд.</span>
+            </button>
+          </div>
+        </div>
+        <div class="programs__slider swiper">
+          <ul class="programs__list swiper-wrapper">
+            <!-- для добавления состояния disabled ссылке programs__slide-link добавляется класс button-round--disabled -->
+            <!-- Для слайдов li через js по разрешению и dpr экрана устанавливаются фоновые изображения на основе значения data-background в блоке programs__item (все фоновые изображения сохраняются с именем по определенной маске на основе этого значения) -->
+            <li class="programs__item swiper-slide" data-background="internship">
+              <h3 class="programs__slide-title">Стажировки</h3>
+              <div class="programs__slide-content">
+                <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                <a class="programs__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с подробным описанием.</span>
+                </a>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide" data-background="volunteer">
+              <h3 class="programs__slide-title">Волонтёрство</h3>
+              <div class="programs__slide-content">
+                <p>Помогайте другим и&nbsp;развивайте свои лидерские качества.</p>
+                <a class="programs__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с подробным описанием.</span>
+                </a>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide" data-background="studying">
+              <h3 class="programs__slide-title">Учёба</h3>
+              <div class="programs__slide-content">
+                <p>Получите образование и&nbsp;измените своё будущее.</p>
+                <a class="programs__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с подробным описанием.</span>
+                </a>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide" data-background="volunteer">
+              <h3 class="programs__slide-title">Религия</h3>
+              <div class="programs__slide-content">
+                <p>Текст про религиозную программу</p>
+                <a class="programs__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с подробным описанием.</span>
+                </a>
+              </div>
+              </li>
+            <li class="programs__item swiper-slide" data-background="studying">
+              <h3 class="programs__slide-title">Учёба-1</h3>
+              <div class="programs__slide-content">
+                <p>Получите образование-1 и&nbsp;измените своё будущее.</p>
+                <a class="programs__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с подробным описанием.</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section class="grant" data-test="grant" id="grant">
         <div class="grant__wrapper container">
           <div class="grant__content-wrapper">

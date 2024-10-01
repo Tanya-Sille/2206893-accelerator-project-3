@@ -1,0 +1,73 @@
+.slider-control {
+  display: flex;
+  justify-content: space-between;
+  width: 52px;
+}
+
+.slider-control__button {
+  position: relative;
+  background-color: $transparent;
+  border: none;
+  height: 22px;
+  width: 22px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $additional-text-color;
+    mask-image: url("/__spritemap#sprite-arrow-right-view");
+    mask-position: center;
+    mask-size: 10px;
+    mask-repeat: no-repeat;
+  };
+
+  &--prev {
+    transform: scale(-1, 1);
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.7;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $additional-color;
+      border-radius: 50%;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $additional-color;
+      border-radius: 50%;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    &::after {
+      background-color: $disabled-color;
+    }
+  }
+}

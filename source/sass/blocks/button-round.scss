@@ -1,0 +1,58 @@
+.button-round {
+  position: relative;
+  height: 30px;
+  height: 30px;
+  background-color: $additional-text-color;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -50%);
+    background-color: $additional-color;
+    mask-image: url("/__spritemap#sprite-arrow-bold-view");
+    mask-size: 10px;
+    mask-repeat: no-repeat;
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    background-color: $additional-color;
+
+    &::before {
+      background-color: $additional-text-color;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  &:active {
+    background-color: $additional-color;
+
+    &::before {
+      background-color: rgba($additional-text-color, 0.7);
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    background-color: $disabled-color;
+
+    &::before {
+      opacity: 0.6;
+    }
+  }
+}

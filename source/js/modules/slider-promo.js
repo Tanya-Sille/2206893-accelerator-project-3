@@ -1,4 +1,4 @@
-import {Swiper} from 'swiper';
+import Swiper from 'swiper';
 import {Pagination} from 'swiper/modules';
 
 const modalOpenButtons = document.querySelectorAll('.promo__content-link');
@@ -14,6 +14,7 @@ new Swiper('.promo', {
   grabCursor: true,
   loop: true,
   autoHeight: true,
+  preventClicks: true,
   slideClass: 'promo__item',
   pagination: {
     el: '.swiper-slide-active .promo__pagination-wrapper',

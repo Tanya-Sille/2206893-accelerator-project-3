@@ -1,4 +1,5 @@
 @import "vendor/normalize";
+@import 'vendor/scrollbar';
 @import "swiper/css";
 
 /* GLOBAL */
@@ -10,13 +11,16 @@
 
 // /* BLOCKS */
 @import "./blocks/button.scss";
+@import "./blocks/button-round.scss";
+@import "./blocks/slider-buttons.scss";
+@import "./blocks/slider-scrollbar.scss";
+@import "./blocks/modal.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/header.scss";
 @import "./blocks/promo.scss";
-@import "./blocks/modal.scss";
 @import "./blocks/about.scss";
 @import "./blocks/grant.scss";
-// @import "./blocks/faq.scss";
+@import "./blocks/programs.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/contacts-form.scss";
 @import "./blocks/form.scss";

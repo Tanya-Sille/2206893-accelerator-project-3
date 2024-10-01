@@ -1,0 +1,13 @@
+.slider-scrollbar {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline-flex;
+    height: 2px;
+    width: 562px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1136px;
+  }
+}
