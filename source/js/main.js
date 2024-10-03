@@ -1,6 +1,7 @@
 // import {Navigation, Pagination} from "swiper/modules";
 import './modules/slider-promo.js';
 import './modules/slider-programs.js';
+import './modules/slider-reviews.js';
 import {openMainMenu, clickMenuLinks, clickSubMenuLinks} from './modules/menu.js';
 import {setPromoBackground, setProgramsBackground} from './modules/set-backgrounds.js';
 import {activateSelectContact, activateSelectModal} from './modules/form-select.js';

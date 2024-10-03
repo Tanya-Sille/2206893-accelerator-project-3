@@ -161,12 +161,12 @@
         <h2 class="programs__title title">Программы</h2>
         <a class="programs__button-link button button--arrow" href="#">Все программы</a>
         <div class="programs__slider-control">
-          <div class="programs__control-scrollbar slider-scrollbar swiper-scrollbar"></div>
-          <div class="programs__control-navigation slider-control">
-            <button class="slider-control__button slider-control__button--prev" type="button">
+          <div class="programs__slider-scrollbar slider-scrollbar swiper-scrollbar"></div>
+          <div class="programs__slider-navigation slider-control">
+            <button class="programs__button-prev slider-control__button slider-control__button--prev" type="button">
               <span class="visually-hidden">Показать предыдущий слайд.</span>
             </button>
-            <button class="slider-control__button slider-control__button--next" type="button">
+            <button class="programs__button-next slider-control__button slider-control__button--next" type="button">
               <span class="visually-hidden">Показать следующий слайд.</span>
             </button>
           </div>
@@ -176,7 +176,7 @@
             <!-- для добавления состояния disabled ссылке programs__slide-link добавляется класс button-round--disabled -->
             <!-- Для слайдов li через js по разрешению и dpr экрана устанавливаются фоновые изображения на основе значения data-background в блоке programs__item (все фоновые изображения сохраняются с именем по определенной маске на основе этого значения) -->
             <li class="programs__item swiper-slide" data-background="internship">
-              <h3 class="programs__slide-title">Стажировки</h3>
+              <h3 class="programs__slide-title subtitle">Стажировки</h3>
               <div class="programs__slide-content">
                 <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
                 <a class="programs__slide-link button-round" href="#">
@@ -185,7 +185,7 @@
               </div>
             </li>
             <li class="programs__item swiper-slide" data-background="volunteer">
-              <h3 class="programs__slide-title">Волонтёрство</h3>
+              <h3 class="programs__slide-title subtitle">Волонтёрство</h3>
               <div class="programs__slide-content">
                 <p>Помогайте другим и&nbsp;развивайте свои лидерские качества.</p>
                 <a class="programs__slide-link button-round" href="#">
@@ -194,7 +194,7 @@
               </div>
             </li>
             <li class="programs__item swiper-slide" data-background="studying">
-              <h3 class="programs__slide-title">Учёба</h3>
+              <h3 class="programs__slide-title subtitle">Учёба</h3>
               <div class="programs__slide-content">
                 <p>Получите образование и&nbsp;измените своё будущее.</p>
                 <a class="programs__slide-link button-round" href="#">
@@ -203,7 +203,7 @@
               </div>
             </li>
             <li class="programs__item swiper-slide" data-background="volunteer">
-              <h3 class="programs__slide-title">Религия</h3>
+              <h3 class="programs__slide-title subtitle">Религия</h3>
               <div class="programs__slide-content">
                 <p>Текст про религиозную программу</p>
                 <a class="programs__slide-link button-round" href="#">
@@ -212,7 +212,7 @@
               </div>
               </li>
             <li class="programs__item swiper-slide" data-background="studying">
-              <h3 class="programs__slide-title">Учёба-1</h3>
+              <h3 class="programs__slide-title subtitle">Учёба-1</h3>
               <div class="programs__slide-content">
                 <p>Получите образование-1 и&nbsp;измените своё будущее.</p>
                 <a class="programs__slide-link button-round" href="#">
@@ -235,12 +235,12 @@
                 <source type="image/webp" srcset="img/grant-mobile.webp 1x, img/grant-mobile@2x.webp 2x" width="290" height="200"> -->
                 <source type="image/png" media="(min-width: 1440px)" srcset="img/grant-desktop.png 1x, img/grant-desktop@2x.png 2x" width="498" height="363">
                 <source type="image/png" media="(min-width: 768px)" srcset="img/grant-tablet.png 1x, img/grant-tablet@2x.png 2x" width="678" height="375">
-                <img src="img/grant-mobile.png" srcset="img/grant-mobile@2x.png 2x" width="290" height="200" alt="Указатели на разные страны мира.">
+                <img src="img/grant-mobile.png" srcset="img/grant-mobile@2x.png 2x" width="290" height="200" alt="Сколько стран - столько наших направлений.">
               </picture>
             </div>
           </div>
           <div class="grant__description-wrapper">
-            <h3 class="grant__description-title">Чтобы получить грант на&nbsp;обучение, вам нужно:</h3>
+            <h3 class="grant__description-title secondary-title">Чтобы получить грант на&nbsp;обучение, вам нужно:</h3>
             <ol class="grant__list">
               <li class="grant__item text">Быть в возрасте от 16 до 30 лет</li>
               <li class="grant__item text">Иметь оконченное среднее образование</li>
@@ -252,7 +252,116 @@
       </section>
       <section data-test="news" id="news">news</section>
       <section data-test="FAQ">FAQ</section>
-      <section data-test="reviews" id="reviews">reviews</section>
+      <section class="reviews container" data-test="reviews" id="reviews">
+        <h2 class="reviews__title title">Отзывы</h2>
+        <div class="reviews__slider-control">
+          <div class="reviews__slider-scrollbar slider-scrollbar swiper-scrollbar"></div>
+          <div class="reviews__slider-navigation slider-control">
+            <button class="reviews__button-prev slider-control__button slider-control__button--prev" type="button">
+              <span class="visually-hidden">Показать предыдущий слайд.</span>
+            </button>
+            <button class="reviews__button-next slider-control__button slider-control__button--next" type="button">
+              <span class="visually-hidden">Показать следующий слайд.</span>
+            </button>
+          </div>
+        </div>
+        <div class="reviews__slider swiper">
+          <ul class="reviews__list swiper-wrapper">
+            <li class="reviews__item swiper-slide">
+              <div class="reviews__author">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.webp 1x, img/reviews/review-lola-alex-tablet@2x.webp 2x" width="90" height="90">
+                  <source type="image/webp" srcset="img/reviews/review-lola-alex-mobile.webp 1x, img/reviews/review-lola-alex-mobile@2x.webp 2x" width="60" height="60"> -->
+                  <source type="image/png" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.png 1x, img/reviews/review-lola-alex-tablet@2x.png 2x" width="90" height="90">
+                  <img src="img/reviews/review-lola-alex-mobile.png" srcset="img/reviews/review-lola-alex-mobile@2x.png 2x" width="60" height="60" alt="">
+                </picture>
+                <span class="reviews__author-name">Лола<br>Алекс</span>
+              </div>
+              <dl class="reviews__info">
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Программа</dt>
+                  <dd class="reviews__info-definition">Masa Art Challenge</dd>
+                </div>
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Дата</dt>
+                  <dd class="reviews__info-definition">Осень 2022</dd>
+                </div>
+              </dl>
+              <div class="reviews__slide-title subtitle">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</div>
+              <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её&nbsp;от&nbsp;других программ, и я чувствую огромную благодарность за&nbsp;предоставленную мне&nbsp;возможность.</p>
+            </li>
+            <li class="reviews__item swiper-slide">
+              <div class="reviews__author">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-ivanov-david-tablet.webp 1x, img/reviews/review-ivanov-david-tablet@2x.webp 2x" width="90" height="90">
+                  <source type="image/webp" srcset="img/reviews/review-ivanov-david-mobile.webp 1x, img/reviews/review-ivanov-david-mobile@2x.webp 2x" width="60" height="60"> -->
+                  <source type="image/png" media="(min-width: 768px)" srcset="img/reviews/review-ivanov-david-tablet.png 1x, img/reviews/review-ivanov-david-tablet@2x.png 2x" width="90" height="90">
+                  <img src="img/reviews/review-ivanov-david-mobile.png" srcset="img/reviews/review-ivanov-david-mobile@2x.png 2x" width="60" height="60" alt="">
+                </picture>
+                <span class="reviews__author-name">Давид<br>Иванов</span>
+              </div>
+              <dl class="reviews__info">
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Программа</dt>
+                  <dd class="reviews__info-definition">Volunteer Chance</dd>
+                </div>
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Дата</dt>
+                  <dd class="reviews__info-definition">Лето 2022</dd>
+                </div>
+              </dl>
+              <div class="reviews__slide-title subtitle">Благодаря опыту стажировки я узнал так&nbsp;много нового о себе и об окружающем мире.</div>
+              <p>Каждый день был возможностью оказать ощутимое влияние на&nbsp;жизнь других людей. Я бы очень рекомендовал эту&nbsp;волонтёрскую программу всем, кто ищет значимый и&nbsp;незабываемый опыт. Организация была на высшем уровне. Для&nbsp;меня было честью быть частью такой удивительной инициативы.</p>
+            </li>
+            <li class="reviews__item swiper-slide">
+              <div class="reviews__author">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.webp 1x, img/reviews/review-lola-alex-tablet@2x.webp 2x" width="90" height="90">
+                  <source type="image/webp" srcset="img/reviews/review-lola-alex-mobile.webp 1x, img/reviews/review-lola-alex-mobile@2x.webp 2x" width="60" height="60"> -->
+                  <source type="image/png" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.png 1x, img/reviews/review-lola-alex-tablet@2x.png 2x" width="90" height="90">
+                  <img src="img/reviews/review-lola-alex-mobile.png" srcset="img/reviews/review-lola-alex-mobile@2x.png 2x" width="60" height="60" alt="">
+                </picture>
+                <span class="reviews__author-name">Лола<br>Алекс-2</span>
+              </div>
+              <dl class="reviews__info">
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Программа-3</dt>
+                  <dd class="reviews__info-definition">Masa Art Challenge</dd>
+                </div>
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Дата</dt>
+                  <dd class="reviews__info-definition">Весна 2022</dd>
+                </div>
+              </dl>
+              <div class="reviews__slide-title subtitle">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</div>
+              <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления.</p>
+            </li>
+            <li class="reviews__item swiper-slide">
+              <div class="reviews__author">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.webp 1x, img/reviews/review-lola-alex-tablet@2x.webp 2x" width="90" height="90">
+                  <source type="image/webp" srcset="img/reviews/review-lola-alex-mobile.webp 1x, img/reviews/review-lola-alex-mobile@2x.webp 2x" width="60" height="60"> -->
+                  <source type="image/png" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.png 1x, img/reviews/review-lola-alex-tablet@2x.png 2x" width="90" height="90">
+                  <img src="img/reviews/review-lola-alex-mobile.png" srcset="img/reviews/review-lola-alex-mobile@2x.png 2x" width="60" height="60" alt="">
+                </picture>
+                <span class="reviews__author-name">Лола<br>Алекс-3</span>
+              </div>
+              <dl class="reviews__info">
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Программа 4</dt>
+                  <dd class="reviews__info-definition">Masa Art Challenge</dd>
+                </div>
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Дата</dt>
+                  <dd class="reviews__info-definition">Весна 2022</dd>
+                </div>
+              </dl>
+              <div class="reviews__slide-title subtitle">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</div>
+              <p>Сочетание путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную благодарность за предоставленную мне возможность.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section class="contacts" data-test="contacts" id="contacts">
         <div class="contacts__wrapper container">
           <div class="contacts__text-wrapper">
@@ -287,7 +396,7 @@
       <section class="contacts-form" data-test="form">
         <div class="contacts-form__image-background-wrapper">
           <div class="contacts-form__wrapper">
-            <h2 class="contacts-form__title">Напишите нам</h2>
+            <h2 class="contacts-form__title secondary-title">Напишите нам</h2>
             <p class="contacts-form__text text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
             <form class="form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
               <label class="form__label">

@@ -30,13 +30,13 @@ new Swiper('.programs__slider', {
   preventClicks: true,
   slideClass: 'programs__item',
   scrollbar: {
-    el: '.programs__control-scrollbar',
+    el: '.programs__slider-scrollbar',
     dragSize: 326,
     draggable: true,
   },
   navigation: {
-    nextEl: '.slider-control__button--next',
-    prevEl: '.slider-control__button--prev',
+    nextEl: '.programs__button-next',
+    prevEl: '.programs__button-prev',
   },
   on: {
     init: (swiper) => {

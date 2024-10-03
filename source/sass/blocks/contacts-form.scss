@@ -72,24 +72,16 @@
 .contacts-form__title {
   @include indent-reset;
   margin-bottom: 10px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  font-style: normal;
   color: $additional-color;
 
   @media (min-width: $tablet-width) {
     margin-top: 11px;
     margin-bottom: 31px;
-    font-size: 28px;
-    line-height: 28px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 14px;
     margin-bottom: 34px;
-    font-size: 32px;
-    line-height: 36px;
   }
 }
 
