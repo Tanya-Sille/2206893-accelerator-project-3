@@ -269,6 +269,11 @@
       padding-bottom: 14px;
     }
   }
+
+  &--error {
+    background-color: rgba($error-color, 0.2);
+    border-color: $error-color;
+  }
 }
 
 .form__select {

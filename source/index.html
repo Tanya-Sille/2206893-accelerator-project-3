@@ -251,7 +251,41 @@
         </div>
       </section>
       <section data-test="news" id="news">news</section>
-      <section data-test="FAQ">FAQ</section>
+      <section class="faq container" data-test="FAQ">
+        <h2 class="faq__title title">Вопросы и ответы</h2>
+        <ul class="faq__list">
+          <li class="faq__item">
+            <button class="faq__accordion-button subtitle" type="button">
+              Кто организатор? Какие сроки у программы?<span class="faq__accordion-icon"></span>
+            </button>
+            <p>Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями. Сроки программы обмена могут варьироваться от одного семестра до года.</p>
+          </li>
+          <li class="faq__item">
+            <button class="faq__accordion-button subtitle" type="button">
+              Что такое грант на&nbsp;обучение?<span class="faq__accordion-icon"></span>
+            </button>
+            <p>Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена студентами для оплаты учебных расходов.</p>
+          </li>
+          <li class="faq__item faq__item--active">
+            <button class="faq__accordion-button subtitle" type="button">
+              Как определяется стоимость программы?<span class="faq__accordion-icon"></span>
+            </button>
+            <p>Полная стоимость определяется организаторами в зависимости от&nbsp;направления. В большинстве случаев грант «Стажировка» не&nbsp;покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+          </li>
+          <li class="faq__item">
+            <button class="faq__accordion-button subtitle" type="button">
+              Признаётся ли учёба в&nbsp;рамках проекта для дальнейшего обучения?<span class="faq__accordion-icon"></span>
+            </button>
+            <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
+          </li>
+          <li class="faq__item">
+            <button class="faq__accordion-button subtitle" type="button">
+              Как выглядит полный процесс регистрации на&nbsp;программу «Стажировка»?<span class="faq__accordion-icon"></span>
+            </button>
+            <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение с координатором программы, заполнение заявления и предоставление необходимых документов, прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
+          </li>
+        </ul>
+      </section>
       <section class="reviews container" data-test="reviews" id="reviews">
         <h2 class="reviews__title title">Отзывы</h2>
         <div class="reviews__slider-control">
@@ -399,6 +433,7 @@
             <h2 class="contacts-form__title secondary-title">Напишите нам</h2>
             <p class="contacts-form__text text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
             <form class="form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+              <!-- в случае ошибки инпуту добавляется класс form__input--error -->
               <label class="form__label">
                 <input class="form__input" type="text" name="name" required>
                 <span class="form__label-text">Имя</span>
@@ -501,6 +536,7 @@
         <h2 class="modal__title">Напишите нам</h2>
         <p class="modal__text text">Оставьте ваши контакты, если&nbsp;у&nbsp;вас остались вопросы — мы на них ответим!</p>
         <form class="modal__form form form--modal" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+          <!-- в случае ошибки инпуту добавляется класс form__input--error -->
           <label class="form__label form__label--modal">
             <input class="form__input form__input--modal" type="text" name="name-modal" required>
             <span class="form__label-text form__label-text--modal">Имя</span>
