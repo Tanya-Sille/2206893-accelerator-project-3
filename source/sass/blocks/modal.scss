@@ -14,6 +14,7 @@
 
 .modal__content {
   @include flex-column(0);
+
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -64,7 +65,7 @@
     height: 30px;
     width: 30px;
 
-    &::before{
+    &::before {
       mask-size: 22px;
     }
   }
@@ -94,6 +95,7 @@
 
 .modal__title {
   @include indent-reset;
+
   margin-bottom: 15px;
   padding: 0 20px;
   font-weight: 400;

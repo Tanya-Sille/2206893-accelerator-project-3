@@ -1,7 +1,6 @@
 .button-round {
   position: relative;
   height: 30px;
-  height: 30px;
   background-color: $additional-text-color;
   border-radius: 50%;
   transition: background-color 0.2s;
@@ -23,36 +22,36 @@
 
   &:hover {
     background-color: $additional-color;
+  }
 
-    &::before {
-      background-color: $additional-text-color;
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
+  &:hover::before {
+    background-color: $additional-text-color;
+    transform: translate(-50%, -50%) rotate(45deg);
   }
 
   &:active {
     background-color: $additional-color;
+  }
 
-    &::before {
-      background-color: rgba($additional-text-color, 0.7);
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
+  &:active::before {
+    background-color: rgba($additional-text-color, 0.7);
+    transform: translate(-50%, -50%) rotate(45deg);
   }
 
   &:focus-visible {
     outline: none;
-
-    &::before {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
   }
 
-  &--disabled {
+  &:focus-visible::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:disabled {
     pointer-events: none;
     background-color: $disabled-color;
+  }
 
-    &::before {
-      opacity: 0.6;
-    }
+  &:disabled::before {
+    opacity: 0.6;
   }
 }

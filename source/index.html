@@ -15,20 +15,12 @@
   </head>
 
   <body class="page">
-    <!-- пример использования спрайта -->
-    <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg> -->
-    <!-- примеры требуемых атрибутов data-test="*" -->
     <main>
       <h1 class="visually-hidden">Проект для стажировки Internship</h1>
       <div class="hero" data-test="hero">
         <header class="hero__header header container">
           <div class="header__logo">
-            <svg alt="Логотип Internship." width="30" height="30">
-              <use href="/__spritemap#sprite-logo"></use>
-            </svg>
+            <img src="/__spritemap#sprite-logo-view" alt="Логотип проекта «Стажировка»." width="30" height="30">
           </div>
           <nav class="header__navigation header__navigation--hidden">
             <button class="header__navigation-toggle button" type="button">Меню</button>
@@ -72,7 +64,7 @@
                     <a class="header__sub-navigation-link header__link" href="#internship-news">Стажировки</a>
                   </li>
                   <li class="header__sub-navigation-item">
-                    <a class="header__sub-navigation-link header__link" href="#carieer-news">Карьера</a>
+                    <a class="header__sub-navigation-link header__link" href="#career-news">Карьера</a>
                   </li>
                   <li class="header__sub-navigation-item">
                     <a class="header__sub-navigation-link header__link" href="#travel-news">Путешествия</a>
@@ -92,9 +84,9 @@
             <li class="promo__item swiper-slide" data-background="studying">
               <div class="promo__content container">
                 <div class="promo__pagination-wrapper"></div>
-                <h3 class="promo__item-title">Глобальный профессиональный опыт обучения за рубежом</h3>
+                <h3 class="promo__item-title">Глобальный профессиональный опыт обучения за&nbsp;рубежом</h3>
                 <div class="promo__item-content">
-                  <p>Погрузитесь в академическую программу, проходя практику в&nbsp;разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                  <p>Погрузитесь в академическую программу, проходя практику в&nbsp;разных городах, ощущая настоящий студенческий стиль&nbsp;жизни!</p>
                   <div class="promo__content-link-wrapper">
                     <a class="promo__content-link button button--arrow" href="#">Подробнее</a>
                   </div>
@@ -173,7 +165,7 @@
         </div>
         <div class="programs__slider swiper">
           <ul class="programs__list swiper-wrapper">
-            <!-- для добавления состояния disabled ссылке programs__slide-link добавляется класс button-round--disabled -->
+            <!-- для добавления состояния disabled ссылке programs__slide-link добавляется класс с модификатором disabled -->
             <!-- Для слайдов li через js по разрешению и dpr экрана устанавливаются фоновые изображения на основе значения data-background в блоке programs__item (все фоновые изображения сохраняются с именем по определенной маске на основе этого значения) -->
             <li class="programs__item swiper-slide" data-background="internship">
               <h3 class="programs__slide-title subtitle">Стажировки</h3>
@@ -230,9 +222,9 @@
             <p>Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения о доступных программах и&nbsp;городах, в которых можете пройти программу.</p>
             <div class="grant__image-wrapper">
               <picture>
-                <!-- <source type="image/webp" media="(min-width: 1440px)" srcset="img/grant-desktop.webp 1x, img/grant-desktop@2x.webp 2x" width="498" height="363">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/grant-desktop.webp 1x, img/grant-desktop@2x.webp 2x" width="498" height="363">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/grant-tablet.webp 1x, img/grant-tablet@2x.webp 2x" width="678" height="375">
-                <source type="image/webp" srcset="img/grant-mobile.webp 1x, img/grant-mobile@2x.webp 2x" width="290" height="200"> -->
+                <source type="image/webp" srcset="img/grant-mobile.webp 1x, img/grant-mobile@2x.webp 2x" width="290" height="200">
                 <source type="image/png" media="(min-width: 1440px)" srcset="img/grant-desktop.png 1x, img/grant-desktop@2x.png 2x" width="498" height="363">
                 <source type="image/png" media="(min-width: 768px)" srcset="img/grant-tablet.png 1x, img/grant-tablet@2x.png 2x" width="678" height="375">
                 <img src="img/grant-mobile.png" srcset="img/grant-mobile@2x.png 2x" width="290" height="200" alt="Сколько стран - столько наших направлений.">
@@ -250,7 +242,361 @@
           </div>
         </div>
       </section>
-      <section data-test="news" id="news">news</section>
+      <section class="news container" data-test="news" id="news">
+        <h2 class="news__title title">Новости и материалы</h2>
+        <ul class="news__tabs-list">
+          <li class="news__tabs-item">
+            <button class="news__tab-button news__tab-button--current" tabindex="-1" data-section="all" type="button">Общее</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab-button" data-section="volunteer" type="button">Волонтёрство</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab-button" data-section="internship" type="button">Стажировки</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab-button" data-section="career" type="button">Карьера</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab-button" data-section="travel" type="button">Путешествия</button>
+          </li>
+        </ul>
+        <div class="news__slider swiper">вые изображения сохраняются с именем по определенной маске на основе этого значения) -->
+          <ul class="news__list swiper-wrapper">
+            <li class="news__item swiper-slide" data-background="internship">
+              <span class="news__slide-date">23/03/2023</span>
+              <h3 class="news__slide-title subtitle">Интервью с участницей программы стажировки</h3>
+              <div class="news__slide-content">
+                <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="travel">
+              <span class="news__slide-date">20/03/2023</span>
+              <h3 class="news__slide-title subtitle">Путешествуем по миру</h3>
+              <div class="news__slide-content">
+                <p>Какие места посещают наши студенты весной</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="volunteer">
+              <span class="news__slide-date">17/03/2023</span>
+              <h3 class="news__slide-title subtitle">Новая программа волонтёрства</h3>
+              <div class="news__slide-content">
+                <p>Программа помощи детям длительностью 4 месяца</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="career">
+              <span class="news__slide-date">10/03/2023</span>
+              <h3 class="news__slide-title subtitle">Построй свою карьеру</h3>
+              <div class="news__slide-content">
+                <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="internship">
+              <span class="news__slide-date">23/03/2023</span>
+              <h3 class="news__slide-title subtitle">Интервью с участницей программы стажировки 1</h3>
+              <div class="news__slide-content">
+                <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="travel">
+              <span class="news__slide-date">20/03/2023</span>
+              <h3 class="news__slide-title subtitle">Путешествуем по миру 1</h3>
+              <div class="news__slide-content">
+                <p>Какие места посещают наши студенты весной</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="volunteer">
+              <span class="news__slide-date">17/03/2023</span>
+              <h3 class="news__slide-title subtitle">Новая программа волонтёрства 1</h3>
+              <div class="news__slide-content">
+                <p>Программа помощи детям длительностью 4 месяца</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="career">
+              <span class="news__slide-date">10/03/2023</span>
+              <h3 class="news__slide-title subtitle">Построй свою карьеру 1</h3>
+              <div class="news__slide-content">
+                <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="internship">
+              <span class="news__slide-date">23/03/2023</span>
+              <h3 class="news__slide-title subtitle">Интервью с участницей программы стажировки 2</h3>
+              <div class="news__slide-content">
+                <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="travel">
+              <span class="news__slide-date">20/03/2023</span>
+              <h3 class="news__slide-title subtitle">Путешествуем по миру 2</h3>
+              <div class="news__slide-content">
+                <p>Какие места посещают наши студенты весной</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="volunteer">
+              <span class="news__slide-date">17/03/2023</span>
+              <h3 class="news__slide-title subtitle">Новая программа волонтёрства 2</h3>
+              <div class="news__slide-content">
+                <p>Программа помощи детям длительностью 4 месяца</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="career">
+              <span class="news__slide-date">10/03/2023</span>
+              <h3 class="news__slide-title subtitle">Построй свою карьеру 2</h3>
+              <div class="news__slide-content">
+                <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="internship">
+              <span class="news__slide-date">23/03/2023</span>
+              <h3 class="news__slide-title subtitle">Интервью с участницей программы стажировки</h3>
+              <div class="news__slide-content">
+                <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="travel">
+              <span class="news__slide-date">20/03/2023</span>
+              <h3 class="news__slide-title subtitle">Путешествуем по миру</h3>
+              <div class="news__slide-content">
+                <p>Какие места посещают наши студенты весной</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="volunteer">
+              <span class="news__slide-date">17/03/2023</span>
+              <h3 class="news__slide-title subtitle">Новая программа волонтёрства</h3>
+              <div class="news__slide-content">
+                <p>Программа помощи детям длительностью 4 месяца</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="career">
+              <span class="news__slide-date">10/03/2023</span>
+              <h3 class="news__slide-title subtitle">Построй свою карьеру</h3>
+              <div class="news__slide-content">
+                <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="internship">
+              <span class="news__slide-date">23/03/2023</span>
+              <h3 class="news__slide-title subtitle">Интервью с участницей программы стажировки 1</h3>
+              <div class="news__slide-content">
+                <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="travel">
+              <span class="news__slide-date">20/03/2023</span>
+              <h3 class="news__slide-title subtitle">Путешествуем по миру 1</h3>
+              <div class="news__slide-content">
+                <p>Какие места посещают наши студенты весной</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="volunteer">
+              <span class="news__slide-date">17/03/2023</span>
+              <h3 class="news__slide-title subtitle">Новая программа волонтёрства 1</h3>
+              <div class="news__slide-content">
+                <p>Программа помощи детям длительностью 4 месяца</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="career">
+              <span class="news__slide-date">10/03/2023</span>
+              <h3 class="news__slide-title subtitle">Построй свою карьеру 1</h3>
+              <div class="news__slide-content">
+                <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="internship">
+              <span class="news__slide-date">23/03/2023</span>
+              <h3 class="news__slide-title subtitle">Интервью с участницей программы стажировки 2</h3>
+              <div class="news__slide-content">
+                <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="travel">
+              <span class="news__slide-date">20/03/2023</span>
+              <h3 class="news__slide-title subtitle">Путешествуем по миру 2</h3>
+              <div class="news__slide-content">
+                <p>Какие места посещают наши студенты весной</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="volunteer">
+              <span class="news__slide-date">17/03/2023</span>
+              <h3 class="news__slide-title subtitle">Новая программа волонтёрства 2</h3>
+              <div class="news__slide-content">
+                <p>Программа помощи детям длительностью 4 месяца</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="career">
+              <span class="news__slide-date">10/03/2023</span>
+              <h3 class="news__slide-title subtitle">Построй свою карьеру 2</h3>
+              <div class="news__slide-content">
+                <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="internship">
+              <span class="news__slide-date">23/03/2023</span>
+              <h3 class="news__slide-title subtitle">Интервью с участницей программы стажировки</h3>
+              <div class="news__slide-content">
+                <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="travel">
+              <span class="news__slide-date">20/03/2023</span>
+              <h3 class="news__slide-title subtitle">Путешествуем по миру</h3>
+              <div class="news__slide-content">
+                <p>Какие места посещают наши студенты весной</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="volunteer">
+              <span class="news__slide-date">17/03/2023</span>
+              <h3 class="news__slide-title subtitle">Новая программа волонтёрства</h3>
+              <div class="news__slide-content">
+                <p>Программа помощи детям длительностью 4 месяца</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="career">
+              <span class="news__slide-date">10/03/2023</span>
+              <h3 class="news__slide-title subtitle">Построй свою карьеру</h3>
+              <div class="news__slide-content">
+                <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="internship">
+              <span class="news__slide-date">23/03/2023</span>
+              <h3 class="news__slide-title subtitle">Интервью с участницей программы стажировки 1</h3>
+              <div class="news__slide-content">
+                <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="travel">
+              <span class="news__slide-date">20/03/2023</span>
+              <h3 class="news__slide-title subtitle">Путешествуем по миру 1</h3>
+              <div class="news__slide-content">
+                <p>Какие места посещают наши студенты весной</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="volunteer">
+              <span class="news__slide-date">17/03/2023</span>
+              <h3 class="news__slide-title subtitle">Новая программа волонтёрства 1</h3>
+              <div class="news__slide-content">
+                <p>Программа помощи детям длительностью 4 месяца</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+            <li class="news__item swiper-slide" data-background="career">
+              <span class="news__slide-date">10/03/2023</span>
+              <h3 class="news__slide-title subtitle">Построй свою карьеру 1</h3>
+              <div class="news__slide-content">
+                <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                <a class="news__slide-link button-round" href="#">
+                  <span class="visually-hidden">Перейти на страницу с полным текстом новости.</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="news__slider-control">
+          <div class="news__slider-navigation slider-control">
+            <button class="news__button-prev slider-control__button slider-control__button--prev" type="button">
+              <span class="visually-hidden">Показать предыдущую страницу.</span>
+            </button>
+            <button class="news__button-next slider-control__button slider-control__button--next" type="button">
+              <span class="visually-hidden">Показать следующую страницу.</span>
+            </button>
+          </div>
+          <div class="news__pagination swiper-pagination"></div>
+        </div>
+      </section>
       <section class="faq container" data-test="FAQ">
         <h2 class="faq__title title">Вопросы и ответы</h2>
         <ul class="faq__list">
@@ -304,8 +650,8 @@
             <li class="reviews__item swiper-slide">
               <div class="reviews__author">
                 <picture>
-                  <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.webp 1x, img/reviews/review-lola-alex-tablet@2x.webp 2x" width="90" height="90">
-                  <source type="image/webp" srcset="img/reviews/review-lola-alex-mobile.webp 1x, img/reviews/review-lola-alex-mobile@2x.webp 2x" width="60" height="60"> -->
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.webp 1x, img/reviews/review-lola-alex-tablet@2x.webp 2x" width="90" height="90">
+                  <source type="image/webp" srcset="img/reviews/review-lola-alex-mobile.webp 1x, img/reviews/review-lola-alex-mobile@2x.webp 2x" width="60" height="60">
                   <source type="image/png" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.png 1x, img/reviews/review-lola-alex-tablet@2x.png 2x" width="90" height="90">
                   <img src="img/reviews/review-lola-alex-mobile.png" srcset="img/reviews/review-lola-alex-mobile@2x.png 2x" width="60" height="60" alt="">
                 </picture>
@@ -322,13 +668,13 @@
                 </div>
               </dl>
               <div class="reviews__slide-title subtitle">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</div>
-              <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её&nbsp;от&nbsp;других программ, и я чувствую огромную благодарность за&nbsp;предоставленную мне&nbsp;возможность.</p>
+              <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её&nbsp;от&nbsp;других программ, и&nbsp;я&nbsp;чувствую огромную благодарность за&nbsp;предоставленную мне&nbsp;возможность.</p>
             </li>
             <li class="reviews__item swiper-slide">
               <div class="reviews__author">
                 <picture>
-                  <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-ivanov-david-tablet.webp 1x, img/reviews/review-ivanov-david-tablet@2x.webp 2x" width="90" height="90">
-                  <source type="image/webp" srcset="img/reviews/review-ivanov-david-mobile.webp 1x, img/reviews/review-ivanov-david-mobile@2x.webp 2x" width="60" height="60"> -->
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-ivanov-david-tablet.webp 1x, img/reviews/review-ivanov-david-tablet@2x.webp 2x" width="90" height="90">
+                  <source type="image/webp" srcset="img/reviews/review-ivanov-david-mobile.webp 1x, img/reviews/review-ivanov-david-mobile@2x.webp 2x" width="60" height="60">
                   <source type="image/png" media="(min-width: 768px)" srcset="img/reviews/review-ivanov-david-tablet.png 1x, img/reviews/review-ivanov-david-tablet@2x.png 2x" width="90" height="90">
                   <img src="img/reviews/review-ivanov-david-mobile.png" srcset="img/reviews/review-ivanov-david-mobile@2x.png 2x" width="60" height="60" alt="">
                 </picture>
@@ -350,8 +696,8 @@
             <li class="reviews__item swiper-slide">
               <div class="reviews__author">
                 <picture>
-                  <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.webp 1x, img/reviews/review-lola-alex-tablet@2x.webp 2x" width="90" height="90">
-                  <source type="image/webp" srcset="img/reviews/review-lola-alex-mobile.webp 1x, img/reviews/review-lola-alex-mobile@2x.webp 2x" width="60" height="60"> -->
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.webp 1x, img/reviews/review-lola-alex-tablet@2x.webp 2x" width="90" height="90">
+                  <source type="image/webp" srcset="img/reviews/review-lola-alex-mobile.webp 1x, img/reviews/review-lola-alex-mobile@2x.webp 2x" width="60" height="60">
                   <source type="image/png" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.png 1x, img/reviews/review-lola-alex-tablet@2x.png 2x" width="90" height="90">
                   <img src="img/reviews/review-lola-alex-mobile.png" srcset="img/reviews/review-lola-alex-mobile@2x.png 2x" width="60" height="60" alt="">
                 </picture>
@@ -373,8 +719,8 @@
             <li class="reviews__item swiper-slide">
               <div class="reviews__author">
                 <picture>
-                  <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.webp 1x, img/reviews/review-lola-alex-tablet@2x.webp 2x" width="90" height="90">
-                  <source type="image/webp" srcset="img/reviews/review-lola-alex-mobile.webp 1x, img/reviews/review-lola-alex-mobile@2x.webp 2x" width="60" height="60"> -->
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.webp 1x, img/reviews/review-lola-alex-tablet@2x.webp 2x" width="90" height="90">
+                  <source type="image/webp" srcset="img/reviews/review-lola-alex-mobile.webp 1x, img/reviews/review-lola-alex-mobile@2x.webp 2x" width="60" height="60">
                   <source type="image/png" media="(min-width: 768px)" srcset="img/reviews/review-lola-alex-tablet.png 1x, img/reviews/review-lola-alex-tablet@2x.png 2x" width="90" height="90">
                   <img src="img/reviews/review-lola-alex-mobile.png" srcset="img/reviews/review-lola-alex-mobile@2x.png 2x" width="60" height="60" alt="">
                 </picture>
@@ -417,9 +763,9 @@
           </div>
           <div class="contacts__image-wrapper">
             <picture>
-              <!-- <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="1240" height="486">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="1240" height="486">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" width="678" height="500">
-              <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" width="290" height="240"> -->
+              <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" width="290" height="240">
               <source type="image/png" media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" width="1240" height="486">
               <source type="image/png" media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" width="678" height="500">
               <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="290" height="240" alt="Как нас найти">
@@ -427,13 +773,13 @@
           </div>
         </div>
       </section>
-      <section class="contacts-form" data-test="form">
-        <div class="contacts-form__image-background-wrapper">
-          <div class="contacts-form__wrapper">
-            <h2 class="contacts-form__title secondary-title">Напишите нам</h2>
-            <p class="contacts-form__text text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-            <form class="form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
-              <!-- в случае ошибки инпуту добавляется класс form__input--error -->
+      <section class="contact-form" data-test="form">
+        <div class="contact-form__image-background-wrapper">
+          <div class="contact-form__wrapper">
+            <h2 class="contact-form__title secondary-title">Напишите нам</h2>
+            <p class="contact-form__text text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+            <form class="contact-form__form form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+              <!-- в случае ошибки инпуту добавляется класс form__error -->
               <label class="form__label">
                 <input class="form__input" type="text" name="name" required>
                 <span class="form__label-text">Имя</span>
@@ -442,26 +788,23 @@
                 <input class="form__input" type="tel" name="tel" required>
                 <span class="form__label-text">Телефон</span>
               </label>
-              <label class="form__label">
-                <textarea class="form__input form__input--textarea" name="comment" required></textarea>
-                <span class="form__label-text">Ваше сообщение</span>
-              </label>
               <div class="form__label">
-                <!-- Для деактивации селекта необходимо установить disabled для кнопки form__select-title
-                 класс form__select-label--active должен быть установлен у лейбла выбранной checked дефолтной опции-->
-                <div class="form__select form__select--contacts" data-state="">
-                  <button type="button" class="form__select-title"></button>
+                <textarea class="form__input form__input--textarea" name="comment" id="message" required></textarea>
+                <label class="form__label-text" for="message">Ваше сообщение</label>
+              </div>
+              <div class="form__label">
+                <!-- Для деактивации селекта необходимо установить disabled для кнопки form__select-title, класс с модификатором active должен быть установлен у лейбла form__select-label выбранной checked дефолтной опции -->
+                <div class="form__select form__select--contacts" data-state="closed">
+                  <button class="form__select-title" type="button"><span class="visually-hidden">Поле выбора города.</span></button>
                   <div class="form__select-options">
-                    <input id="empty" class="form__select-option" type="radio" name="city" checked value="" />
-                    <label for="empty" tabindex="-1" class="form__select-label form__select-label--active" data-value=""></label>
-                    <input id="Saint-Petersburg" class="form__select-option" type="radio" name="city" value="Санкт-Петербург" />
-                    <label for="Saint-Petersburg" tabindex="-1" class="form__select-label" data-value="Санкт-Петербург"></label>
-                    <input id="Moscow" class="form__select-option" type="radio" name="city" value="Москва" />
-                    <label for="Moscow" tabindex="-1" class="form__select-label" data-value="Москва"></label>
-                    <input id="Nizhny-Novgorod" class="form__select-option" type="radio" name="city" value="Нижний Новгород" />
-                    <label for="Nizhny-Novgorod" tabindex="-1" class="form__select-label" data-value="Нижний Новгород"></label>
-                    <input id="Other" class="form__select-option" type="radio" name="city" value="Другой" />
-                    <label for="Other" tabindex="-1" class="form__select-label" data-value="Другой"></label>
+                    <input class="form__select-option" id="empty" type="radio" name="city" disabled checked value=" ">
+                    <label class="form__select-label form__select-label--active" for="empty" data-value=" " tabindex="-1"><span class="visually-hidden">Не выбран.</span></label>
+                    <input class="form__select-option" id="saint-petersburg" type="radio" name="city" value="Санкт-Петербург">
+                    <label class="form__select-label" for="saint-petersburg" data-value="Санкт-Петербург" tabindex="-1"><span class="visually-hidden">Санкт-Петербург.</span></label>
+                    <input class="form__select-option" id="moscow" type="radio" name="city" value="Москва">
+                    <label class="form__select-label" for="moscow" data-value="Москва" tabindex="-1"><span class="visually-hidden">Москва.</span></label>
+                    <input class="form__select-option" id="other" type="radio" name="city" value="Другой">
+                    <label class="form__select-label" for="other" data-value="Другой" tabindex="-1"><span class="visually-hidden">Другой.</span></label>
                   </div>
                 </div>
                 <span class="form__label-text form__label-text--select">Выберите город</span>
@@ -480,9 +823,7 @@
     <footer class="footer container" data-test="footer">
       <div class="footer__navigation">
         <div class="footer__logo">
-          <svg alt="Логотип Internship." width="30" height="30">
-            <use href="/__spritemap#sprite-logo"></use>
-          </svg>
+          <img src="/__spritemap#sprite-logo-view" alt="Логотип проекта «Стажировка»." width="30" height="30">
         </div>
         <ul class="footer__navigation-list">
           <li class="footer__navigation-item">
@@ -536,7 +877,7 @@
         <h2 class="modal__title">Напишите нам</h2>
         <p class="modal__text text">Оставьте ваши контакты, если&nbsp;у&nbsp;вас остались вопросы — мы на них ответим!</p>
         <form class="modal__form form form--modal" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
-          <!-- в случае ошибки инпуту добавляется класс form__input--error -->
+          <!-- в случае ошибки инпуту добавляется класс form__error -->
           <label class="form__label form__label--modal">
             <input class="form__input form__input--modal" type="text" name="name-modal" required>
             <span class="form__label-text form__label-text--modal">Имя</span>
@@ -546,21 +887,18 @@
             <span class="form__label-text form__label-text--modal">Телефон</span>
           </label>
           <div class="form__label form__label--modal">
-            <!-- Для деактивации селекта необходимо установить disabled для кнопки form__select-title
-             класс form__select-label--active должен быть установлен у лейбла выбранной checked дефолтной опции-->
-            <div class="form__select form__select--modal" data-state="">
-              <button type="button" class="form__select-title form__select-title--modal"></button>
+            <!-- Для деактивации селекта необходимо установить disabled для кнопки form__select-title, класс с модификатором active должен быть установлен у лейбла form__select-label выбранной checked дефолтной опции -->
+            <div class="form__select form__select--modal" data-state="closed">
+              <button class="form__select-title form__select-title--modal" type="button"><span class="visually-hidden">Поле выбора города.</span></button>
               <div class="form__select-options form__select-options--modal">
-                <input id="empty-modal" class="form__select-option" type="radio" name="city-modal" checked value="" />
-                <label for="empty-modal" tabindex="-1" class="form__select-label form__select-label--active" data-value=""></label>
-                <input id="Saint-Petersburg-modal" class="form__select-option" type="radio" name="city-modal" value="Санкт-Петербург" />
-                <label for="Saint-Petersburg-modal" tabindex="-1" class="form__select-label" data-value="Санкт-Петербург"></label>
-                <input id="Moscow-modal" class="form__select-option" type="radio" name="city-modal" value="Москва" />
-                <label for="Moscow-modal" tabindex="-1" class="form__select-label" data-value="Москва"></label>
-                <input id="Nizhny-Novgorod-modal" class="form__select-option" type="radio" name="city-modal" value="Нижний Новгород" />
-                <label for="Nizhny-Novgorod-modal" tabindex="-1" class="form__select-label" data-value="Нижний Новгород"></label>
-                <input id="Other-modal" class="form__select-option" type="radio" name="city-modal" value="Другой" />
-                <label for="Other-modal" tabindex="-1" class="form__select-label" data-value="Другой"></label>
+                <input class="form__select-option" id="empty-modal" type="radio" name="city-modal" disabled checked value=" ">
+                <label class="form__select-label form__select-label--active" for="empty-modal" tabindex="-1" data-value=" "><span class="visually-hidden">Не выбран.</span></label>
+                <input class="form__select-option" id="saint-petersburg-modal" type="radio" name="city-modal" value="Санкт-Петербург">
+                <label class="form__select-label" for="saint-petersburg-modal" tabindex="-1" data-value="Санкт-Петербург"><span class="visually-hidden">Санкт-Петербург.</span></label>
+                <input class="form__select-option" id="moscow-modal" type="radio" name="city-modal" value="Москва">
+                <label class="form__select-label" for="moscow-modal" tabindex="-1" data-value="Москва"><span class="visually-hidden">Москва.</span></label>
+                <input class="form__select-option" id="other-modal" type="radio" name="city-modal" value="Другой">
+                <label class="form__select-label" for="other-modal" tabindex="-1" data-value="Другой"><span class="visually-hidden">Другой.</span></label>
               </div>
             </div>
             <span class="form__label-text form__label-text--modal form__label-text--select">Выберите город</span>

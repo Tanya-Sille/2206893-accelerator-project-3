@@ -10,6 +10,7 @@
   border: none;
   height: 22px;
   width: 22px;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -23,7 +24,7 @@
     mask-position: center;
     mask-size: 10px;
     mask-repeat: no-repeat;
-  };
+  }
 
   &--prev {
     transform: scale(-1, 1);

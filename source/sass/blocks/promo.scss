@@ -36,6 +36,7 @@
 
 .promo__content {
   @include flex-column(0);
+
   position: relative;
   margin-top: auto;
   padding: 0 $mobile-padding;
@@ -51,6 +52,7 @@
 
 .promo__pagination-wrapper {
   @include list-reset;
+
   position: relative;
   display: flex;
   align-self: flex-start;
@@ -159,7 +161,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 50px 34px;
+    padding: 40px 50px 30px;
     font-size: 54px;
     line-height: 62px;
   }
@@ -167,6 +169,7 @@
 
 .promo__item-content {
   @include flex-column(0);
+
   position: relative;
   align-items: flex-start;
   z-index: 1;
@@ -220,14 +223,14 @@
   margin: 0;
   padding: 0 14px 15px;
   width: 267px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: $base-text-color;
 
   @media (max-width: ($tablet-width - 0.02)) {
     background-color: $additional-color;
-    border-radius: 0 0 14px 0;
+    border-radius: 0 0 14px;
 
     &::before {
       content: "";
@@ -258,7 +261,6 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     width: 285px;
-    font-size: 16px;
     margin-right: auto;
   }
 

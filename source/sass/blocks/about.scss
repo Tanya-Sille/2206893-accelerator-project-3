@@ -26,6 +26,7 @@
 
 .about__internship-wrapper p {
   @include indent-reset;
+
   color: $base-text-color;
   font-weight: 400;
   font-size: 16px;
@@ -37,7 +38,7 @@
     line-height: 26px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     font-size: 22px;
     line-height: 32px;
   }
@@ -45,6 +46,7 @@
 
 .about__target-wrapper {
   @include flex-column(20px);
+
   align-items: flex-start;
 
   @media (min-width: $tablet-width) {
@@ -52,13 +54,14 @@
     width: 498px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     gap: 40px;
   }
 }
 
 .about__target-wrapper h3 {
   @include indent-reset;
+
   color: $additional-text-color;
   font-weight: 400;
   font-size: 18px;
@@ -78,6 +81,7 @@
 
 .about__target-wrapper p {
   @include indent-reset;
+
   color: $base-text-color;
   font-weight: 400;
   font-size: 14px;
@@ -118,6 +122,7 @@
 
 .about__list {
   @include list-reset;
+
   display: grid;
   padding: 20px 20px 40px 0;
   background-color: $additional-text-color;
@@ -140,6 +145,7 @@
 
 .about__item {
   @include flex-column(15px);
+
   position: relative;
   padding: 38px 21px 16px 41px;
   align-items: flex-start;
@@ -180,6 +186,7 @@
 
 .about__item h4 {
   @include indent-reset;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -203,6 +210,7 @@
 
 .about__item p {
   @include indent-reset;
+
   font-weight: 300;
   font-size: 14px;
   line-height: 20px;

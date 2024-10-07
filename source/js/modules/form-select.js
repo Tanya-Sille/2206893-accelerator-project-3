@@ -8,7 +8,7 @@ const activateSelect = (select) => {
   let selectedOption = select.querySelector('.form__select-option:checked');
 
   const closeSelect = () => {
-    select.setAttribute('data-state', '');
+    select.setAttribute('data-state', 'closed');
     selectLabels.forEach((selectLabel) => selectLabel.setAttribute('tabindex', '-1'));
   };
 

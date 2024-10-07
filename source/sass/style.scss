@@ -1,29 +1,31 @@
 @import "vendor/normalize";
-@import 'vendor/scrollbar';
+@import "vendor/scrollbar";
 @import "swiper/css";
+@import "swiper/css/grid";
 
 /* GLOBAL */
-@import "./global/variables.scss";
-@import "./global/mixins.scss";
-@import "./global/fonts.scss";
-@import "./global/global.scss";
-@import "./global/typography.scss";
+@import "./global/variables";
+@import "./global/mixins";
+@import "./global/fonts";
+@import "./global/global";
+@import "./global/typography";
 
 // /* BLOCKS */
-@import "./blocks/button.scss";
-@import "./blocks/button-round.scss";
-@import "./blocks/slider-buttons.scss";
-@import "./blocks/slider-scrollbar.scss";
-@import "./blocks/modal.scss";
-@import "./blocks/hero.scss";
-@import "./blocks/header.scss";
-@import "./blocks/promo.scss";
-@import "./blocks/about.scss";
-@import "./blocks/grant.scss";
-@import "./blocks/programs.scss";
-@import "./blocks/faq.scss";
-@import "./blocks/reviews.scss";
-@import "./blocks/contacts.scss";
-@import "./blocks/contacts-form.scss";
-@import "./blocks/form.scss";
-@import "./blocks/footer.scss";
+@import "./blocks/button";
+@import "./blocks/button-round";
+@import "./blocks/slider-buttons";
+@import "./blocks/slider-scrollbar";
+@import "./blocks/modal";
+@import "./blocks/hero";
+@import "./blocks/header";
+@import "./blocks/promo";
+@import "./blocks/about";
+@import "./blocks/grant";
+@import "./blocks/programs";
+@import "./blocks/news";
+@import "./blocks/faq";
+@import "./blocks/reviews";
+@import "./blocks/contacts";
+@import "./blocks/contact-form";
+@import "./blocks/form";
+@import "./blocks/footer";

@@ -45,6 +45,7 @@
   &::after {
     height: 34px;
     width: 34px;
+    right: 4px;
   }
 
   @media (max-width: ($tablet-width - 0.02)) {
@@ -102,6 +103,7 @@
 
 .programs__item {
   @include flex-column(0);
+
   padding: 18px 10px;
   min-height: 400px;
   background-color: $overlay-photo-color;
@@ -175,7 +177,7 @@
   padding: 12px 18px 15px;
   min-height: 69px;
   background-color: $additional-color;
-  border-radius: 0 12px 12px 12px;
+  border-radius: 0 12px 12px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 202px 30px;
@@ -190,6 +192,7 @@
 
 .programs__slide-content p {
   @include indent-reset;
+
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;

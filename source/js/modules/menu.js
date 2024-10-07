@@ -6,7 +6,7 @@ const menuSubNavigationLinks = mainMenu.querySelectorAll('.header__sub-navigatio
 let currentPageLink = mainMenu.querySelector('.header__link--current');
 
 const onDocumentClick = (evt) => {
-  if (!evt.target.closest('.header')) {
+  if (!evt.target.closest('.header__navigation')) {
     evt.preventDefault();
     document.body.classList.remove('menu-open-overlay');
     mainMenu.classList.add('header__navigation--hidden');

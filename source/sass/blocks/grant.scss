@@ -25,6 +25,7 @@
 
 .grant__content-wrapper {
   @include flex-column(15px);
+
   align-items: flex-start;
   color: $additional-color;
 
@@ -45,6 +46,7 @@
 
 .grant__content-wrapper p {
   @include indent-reset;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -71,8 +73,9 @@
   }
 }
 
-.grant__description-wrapper  {
+.grant__description-wrapper {
   @include flex-column(15px);
+
   align-items: flex-start;
   color: $additional-color;
 
@@ -87,6 +90,7 @@
 
 .grant__description-title {
   @include indent-reset;
+
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -108,8 +112,9 @@
 
 .grant__list {
   @include list-reset;
+
   display: grid;
-	counter-reset: num;
+  counter-reset: num;
   gap: 10px;
 
   @media (min-width: $tablet-width) {

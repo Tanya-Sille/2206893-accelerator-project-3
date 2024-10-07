@@ -70,85 +70,83 @@
     pointer-events: none;
     color: $disabled-color;
     border-color: $disabled-color;
-
-    &::before {
-      background-color: $disabled-color;
-    }
-
-    &::after {
-      background-color: rgba($additional-color, 0.6);
-    }
   }
 
-  &--arrow {
-    &::after {
-      mask-image: url("/__spritemap#sprite-arrow-bold-view");
-      mask-size: 10px;
-    }
+  &:disabled::before {
+    background-color: $disabled-color;
+  }
 
-    &:hover::after,
-    &:active::after,
-    &:focus-visible::after {
-      transform: translateY(-50%) rotate(45deg);
-    }
+  &:disabled::after {
+    background-color: rgba($additional-color, 0.6);
+  }
 
-    &:hover::after,
-    &:focus-visible::after {
-      transition: transform 0.3s;
-    }
+  &--arrow::after {
+    mask-image: url("/__spritemap#sprite-arrow-bold-view");
+    mask-size: 10px;
+  }
+
+  &--arrow:hover::after,
+  &--arrow:active::after,
+  &--arrow:focus-visible::after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &--arrow:hover::after,
+  &--arrow:focus-visible::after {
+    transition: transform 0.3s;
   }
 
   &--reversed {
     border-color: $additional-color;
     color: $additional-color;
+  }
 
-    &::before {
-      background-color: $additional-color;
-    }
+  &--reversed::before {
+    background-color: $additional-color;
+  }
 
-    &::after {
-      background-color: $additional-text-color;
-    }
+  &--reversed::after {
+    background-color: $additional-text-color;
+  }
 
-    &:hover {
-      color: $additional-text-color;
-      background-color: $additional-color;
+  &--reversed:hover {
+    color: $additional-text-color;
+    background-color: $additional-color;
+  }
 
-      &::before {
-        background-color: $additional-text-color;
-      }
+  &--reversed:hover::before {
+    background-color: $additional-text-color;
+  }
 
-      &::after {
-        background-color: $additional-color;
-      }
-    }
+  &--reversed:hover::after {
+    background-color: $additional-color;
+  }
 
-    &:active {
-      color: rgba($additional-text-color, 0.7);
-      background-color: $additional-color;
+  &--reversed:active {
+    color: rgba($additional-text-color, 0.7);
+    background-color: $additional-color;
+  }
 
-      &::before {
-        background-color: $additional-text-color;
-      }
+  &--reversed:active::before {
+    background-color: $additional-text-color;
+  }
 
-      &::after {
-        background-color: rgba($additional-text-color, 0.7);
-      }
-    }
+  &--reversed:active::after {
+    background-color: rgba($additional-text-color, 0.7);
+  }
 
-    &:disabled {
-      pointer-events: none;
-      color: $disabled-color;
-      border-color: $disabled-color;
+  &--reversed:disabled {
+    pointer-events: none;
+    color: $disabled-color;
+    border-color: $disabled-color;
+  }
 
-      &::before {
-        background-color: $disabled-color;
-      }
+  &--reversed:disabled::before {
+    background-color: $disabled-color;
+  }
 
-      &::after {
-        background-color: rgba($additional-color, 0.6);
-      }
-    }
+  &--reversed:disabled::after {
+    background-color: rgba($additional-color, 0.6);
   }
 
   @media (min-width: $tablet-width) {

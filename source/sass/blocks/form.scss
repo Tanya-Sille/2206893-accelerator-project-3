@@ -143,9 +143,10 @@
 }
 
 .form__label-text {
+  margin-top: 1px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 13px;
   font-style: normal;
   opacity: 0.8;
   order: -1;
@@ -167,6 +168,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     font-size: 14px;
     line-height: 20px;
 
@@ -213,6 +215,14 @@
     height: 94px;
     line-height: 14px;
     resize: none;
+
+    @media (min-width: $tablet-width) {
+      height: 88px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 90px;
+    }
   }
 
   &:hover {
@@ -269,40 +279,33 @@
       padding-bottom: 14px;
     }
   }
-
-  &--error {
-    background-color: rgba($error-color, 0.2);
-    border-color: $error-color;
-  }
 }
 
 .form__select {
   position: relative;
   display: flex;
   width: calc(100% - 10px);
-  height: 50px;
+  height: 52px;
   z-index: 1;
 
-  &[data-state="active"] {
-    .form__select-title {
-      border-color: $additional-color;
+  &[data-state="active"] .form__select-title {
+    border-color: $additional-color;
+  }
 
-      &::before {
-        transform: rotate(-180deg);
-      }
-    }
+  &[data-state="active"] .form__select-title::before {
+    transform: rotate(-180deg);
+  }
 
-    .form__select-options {
-      border-width: 1px;
-    }
+  &[data-state="active"] .form__select-options {
+    border-width: 1px;
+  }
 
-    .form__select-label {
-      max-height: 48px;
+  &[data-state="active"] .form__select-label {
+    max-height: 48px;
+  }
 
-      &::before {
-        opacity: 1;
-      }
-    }
+  &[data-state="active"] .form__select-label::before {
+    opacity: 1;
   }
 
   &[data-state="active"] + .form__label-text {
@@ -312,25 +315,25 @@
   &--modal {
     width: auto;
     height: 44px;
+  }
 
-    &[data-state="active"] {
-      .form__select-title {
-        border-color: $base-text-color;
-      }
+  &--modal[data-state="active"] .form__select-title {
+    border-color: $base-text-color;
+  }
 
-      .form__select-label {
-        max-height: 42px;
-      }
+  &--modal[data-state="active"] .form__select-label {
+    max-height: 42px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+
+    &--modal {
+      height: 50px;
     }
 
-    @media (min-width: $tablet-width) {
-      height: 50px;
-
-      &[data-state="active"] {
-        .form__select-label {
-          max-height: 48px;
-        }
-      }
+    &--modal[data-state="active"] .form__select-label {
+      max-height: 48px;
     }
   }
 
@@ -338,10 +341,6 @@
   &:has(.form__select-title:active) + .form__label-text,
   &:has(.form__select-title:focus-visible) + .form__label-text {
     opacity: 1;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: auto;
   }
 }
 
@@ -399,10 +398,10 @@
     border-color: $disabled-color;
     background-color: rgba($additional-color, 0.2);
     color: $disabled-color;
+  }
 
-    &::before {
-      background-color: $disabled-color;
-    }
+  &:disabled::before {
+    background-color: $disabled-color;
   }
 
   &:disabled + .form__label-text {
@@ -415,28 +414,30 @@
     background-color: $additional-color;
     color: $base-text-color;
     border-color: rgba($base-text-color, 0.3);
+  }
 
-    &::before {
-      background-color: $base-text-color;
-    }
+  &--modal::before {
+    background-color: $base-text-color;
+  }
 
-    &:hover,
-    &:active,
-    &:focus-visible {
-      border-color: $base-text-color;
-      color: $base-text-color;
-    }
+  &--modal:hover,
+  &--modal:active,
+  &--modal:focus-visible {
+    border-color: $base-text-color;
+    color: $base-text-color;
+  }
 
-    &:disabled {
-      border-color: rgba($disabled-color, 0.5);
-      background-color: rgba($disabled-color, 0.2);
+  &--modal:disabled {
+    border-color: rgba($disabled-color, 0.5);
+    background-color: rgba($disabled-color, 0.2);
+  }
 
-      &::before {
-        background-color: rgba($disabled-color, 0.5);
-      }
-    }
+  &--modal:disabled::before {
+    background-color: rgba($disabled-color, 0.5);
+  }
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
+    &--modal {
       padding-top: 14px;
       padding-bottom: 14px;
     }
@@ -445,6 +446,7 @@
 
 .form__select-options {
   @include flex-column(0);
+
   position: absolute;
   top: 55px;
   left: 0;
@@ -460,8 +462,10 @@
   &--modal {
     top: 51px;
     border-color: $base-text-color;
+  }
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
+    &--modal {
       top: 55px;
     }
   }
@@ -477,10 +481,10 @@
 
   &:focus-visible + label {
     background-color: $additional-text-color;
+  }
 
-    &::before {
-      color: $additional-color;
-    }
+  &:focus-visible + label::before {
+    color: $additional-color;
   }
 
   &:disabled + label {
@@ -532,32 +536,34 @@
 
   &--active {
     background-color: $additional-text-color;
+  }
 
-    &::before {
-      color: $additional-color;
-    }
+  &--active::before {
+    color: $additional-color;
+  }
 
-    &::after {
-      content: attr(data-value);
-    }
+  &--active::after {
+    content: attr(data-value);
   }
 
   &--modal {
     width: auto;
     height: 44px;
+  }
 
-    &::after {
-      top: -51px;
-      height: 44px;
+  &--modal::after {
+    top: -51px;
+    height: 44px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--modal {
+      height: 48px;
     }
 
-    @media (min-width: $tablet-width) {
+    &--modal::after {
+      top: -55px;
       height: 48px;
-
-      &::after {
-        top: -55px;
-        height: 48px;
-      }
     }
   }
 
@@ -567,19 +573,19 @@
 
   &:active {
     background-color: $additional-text-color;
+  }
 
-    &::before {
-      color: $additional-color;
-    }
+  &:active::before {
+    color: $additional-color;
   }
 
   &:focus-visible {
     background-color: $additional-text-color;
     outline: none;
+  }
 
-    &::before {
-      color: $additional-color;
-    }
+  &:focus-visible::before {
+    color: $additional-color;
   }
 }
 
@@ -603,6 +609,13 @@
       height: 46px;
       width: 46px;
     }
+
+    &--modal {
+      margin-right: auto;
+      margin-left: auto;
+      padding: 19px 79px 19px 29px;
+      width: auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -613,17 +626,15 @@
     margin-top: 10px;
     padding: 14px 67px 14px 29px;
     width: 100%;
-
-    &::before,
-    &::after {
-      right: 4px;
-    }
-
-    @media (min-width: $tablet-width) {
-      margin-right: auto;
-      margin-left: auto;
-      padding: 19px 79px 19px 29px;
-      width: auto;
-    }
   }
+
+  &--modal::before,
+  &--modal::after {
+    right: 4px;
+  }
+}
+
+.form__error {
+  background-color: rgba($error-color, 0.2);
+  border-color: $error-color;
 }

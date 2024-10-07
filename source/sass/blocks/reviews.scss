@@ -10,14 +10,35 @@
     grid-template-columns: 1fr auto;
   }
 
+  @media (min-width: $tablet-width) {
+    gap: 40px;
+  }
+
   @media (min-width: $tablet-width) and (max-width: ($desktop-width - 0.02)) {
     padding-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
 .reviews__title {
-  padding: 5px 0;
+  padding: 6px 0 5px;
   color: $additional-text-color;
+
+  @media (max-width: ($tablet-width - 0.02)) {
+    line-height: 19px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 5px 0;
+  }
 }
 
 .reviews__slider-control {
@@ -58,19 +79,20 @@
   display: grid;
   align-content: start;
   align-items: center;
-  padding: 31px 17px;
+  padding: 30px 15px;
   min-height: 472px;
-  border: 1px solid $additional-text-color;
+  border: 2px solid $additional-text-color;
   border-radius: 16px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr auto;
     gap: 25px 15px;
-    padding: 51px;
+    padding: 50px;
     min-height: 417px;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 50px 46px 50px 50px;
     padding-right: 47px;
     min-height: 483px;
   }
@@ -86,6 +108,7 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: 90px 1fr;
     margin-bottom: 0;
+    gap: 15px;
   }
 }
 
@@ -119,6 +142,7 @@
 
 .reviews__info {
   @include list-reset;
+
   display: grid;
   grid-template-columns: 118px 1fr;
   gap: 15px;
@@ -127,6 +151,7 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: auto auto;
     gap: 25px;
+    margin-bottom: 0;
   }
 }
 
@@ -166,6 +191,7 @@
 }
 
 .reviews__slide-title {
+  margin-top: -1px;
   margin-bottom: 20px;
   color: $additional-text-color;
 
@@ -178,6 +204,7 @@
 
 .reviews__item p {
   @include indent-reset;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;

@@ -1,7 +1,6 @@
 import Swiper from 'swiper';
 import {Navigation, Scrollbar} from 'swiper/modules';
 
-
 new Swiper('.reviews__slider', {
   modules: [Navigation, Scrollbar],
   watchOverflow: true,
@@ -12,7 +11,6 @@ new Swiper('.reviews__slider', {
   simulateTouch: true,
   allowTouchMove: true,
   grabCursor: true,
-  autoHeight: true,
   preventClicks: true,
   slideClass: 'reviews__item',
   scrollbar: {
@@ -29,6 +27,7 @@ new Swiper('.reviews__slider', {
       spaceBetween: 30,
     },
     1440: {
+      spaceBetween: 32,
       speed: 400,
       slidesPerView: 2,
       simulateTouch: false,

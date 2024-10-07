@@ -26,6 +26,7 @@
 
 .faq__list {
   @include list-reset;
+
   display: grid;
   gap: 10px;
   width: 100%;
@@ -33,6 +34,7 @@
 
 .faq__item p {
   @include indent-reset;
+
   display: none;
   opacity: 0;
   max-height: 0;
@@ -184,12 +186,12 @@
   &--active .faq__accordion-icon {
     background-color: $additional-color;
     border-color: $additional-color;
+  }
 
-    &::before,
-    &::after {
-      background-color: $additional-text-color;
-      transform: translate(-50%, -50%);
-    }
+  &--active .faq__accordion-icon::before,
+  &--active .faq__accordion-icon::after {
+    background-color: $additional-text-color;
+    transform: translate(-50%, -50%);
   }
 
   &--active p {
@@ -217,20 +219,22 @@
   &--active:has(.faq__accordion-button:hover) .faq__accordion-icon,
   &--active:has(.faq__accordion-button:focus-visible) .faq__accordion-icon {
     background-color: $additional-text-color;
+  }
 
-    &::before,
-    &::after {
-      background-color: $additional-color;
-    }
+  &--active:has(.faq__accordion-button:hover) .faq__accordion-icon::before,
+  &--active:has(.faq__accordion-button:hover) .faq__accordion-icon::after,
+  &--active:has(.faq__accordion-button:focus-visible) .faq__accordion-icon::before,
+  &--active:has(.faq__accordion-button:focus-visible) .faq__accordion-icon::after {
+    background-color: $additional-color;
   }
 
   &--active:has(.faq__accordion-button:active) .faq__accordion-icon {
     background-color: $additional-color;
+  }
 
-    &::before,
-    &::after {
-      background-color: $active-color;
-    }
+  &--active:has(.faq__accordion-button:active) .faq__accordion-icon::before,
+  &--active:has(.faq__accordion-button:active) .faq__accordion-icon::after {
+    background-color: $active-color;
   }
 
   &:has(.faq__accordion-button:disabled) {

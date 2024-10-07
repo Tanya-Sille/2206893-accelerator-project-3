@@ -1,10 +1,10 @@
+import {activateSelectModal} from './form-select.js';
 
 const aboutButton = document.querySelector('.about__button');
 const modalContainer = document.querySelector('.modal');
 const modalForm = modalContainer.querySelector('.modal__form');
 const modalSubmitButton = modalContainer.querySelector('.form__button--modal');
 const modalCloseButton = modalContainer.querySelector('.modal__close-button');
-
 
 const onModalSubmitButton = (evt) => {
   evt.preventDefault();
@@ -47,6 +47,7 @@ const initModal = () => {
     modalCloseButton.addEventListener('click', onModalCloseButton);
     modalContainer.addEventListener('click', onDocumentClick);
     document.addEventListener('keydown', onDocumentEscapeKeydown);
+    activateSelectModal();
   });
 };
 

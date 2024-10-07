@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import {Pagination} from 'swiper/modules';
 
-const modalOpenButtons = document.querySelectorAll('.promo__content-link');
+const promoContentLinks = document.querySelectorAll('.promo__content-link');
 
 new Swiper('.promo', {
   modules: [Pagination],
@@ -9,6 +9,7 @@ new Swiper('.promo', {
   slidesPerView: 1,
   speed: 300,
   spaceBetween: 0,
+  lazy: true,
   simulateTouch: true,
   allowTouchMove: true,
   grabCursor: true,
@@ -39,8 +40,8 @@ new Swiper('.promo', {
       swiper.pagination.render();
       swiper.pagination.update();
 
-      modalOpenButtons.forEach((button) => button.setAttribute('tabindex', '-1'));
-      modalOpenButtons[swiper.realIndex].setAttribute('tabindex', '0');
+      promoContentLinks.forEach((button) => button.setAttribute('tabindex', '-1'));
+      promoContentLinks[swiper.realIndex].setAttribute('tabindex', '0');
     }
   }
 });

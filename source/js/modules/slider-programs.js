@@ -53,8 +53,9 @@ new Swiper('.programs__slider', {
       spaceBetween: 30,
     },
     1440: {
-      speed: 600,
       slidesPerView: 3,
+      speed: 600,
+      spaceBetween: 32,
       simulateTouch: false,
       allowTouchMove: false,
       scrollbar: {
